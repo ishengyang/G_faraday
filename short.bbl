@@ -1,4 +1,4 @@
-\begin{thebibliography}{2}
+\begin{thebibliography}{3}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \expandafter\ifx\csname bibnamefont\endcsname\relax
   \def\bibnamefont#1{#1}\fi
@@ -24,5 +24,13 @@
   \bibinfo{author}{\bibfnamefont{B.}~\bibnamefont{Mashhoon}},
   \bibinfo{journal}{Phys. Rev.} \textbf{\bibinfo{volume}{D65}},
   \bibinfo{pages}{064025} (\bibinfo{year}{2002}), \eprint{gr-qc/0110101}.
+
+\bibitem[{\citenamefont{Brodutch et~al.}(2011)\citenamefont{Brodutch, Demarie,
+  and Terno}}]{BroDem11}
+\bibinfo{author}{\bibfnamefont{A.}~\bibnamefont{Brodutch}},
+  \bibinfo{author}{\bibfnamefont{T.~F.} \bibnamefont{Demarie}},
+  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{D.~R.} \bibnamefont{Terno}},
+  \bibinfo{journal}{Phys. Rev.} \textbf{\bibinfo{volume}{D84}},
+  \bibinfo{pages}{104043} (\bibinfo{year}{2011}), \eprint{1108.0973}.
 
 \end{thebibliography}
