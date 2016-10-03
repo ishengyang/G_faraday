@@ -50,7 +50,7 @@ The observed rotation is a consequence of a rotated gradient but a fixed polariz
 One obvious reason is that it is usually very small. 
 The rotation angle of a linearly polarized light ray, caused by a gravitational lens, is suppressed by two small numbers.
 \begin{equation}
-\Delta\phi \propto \frac{2GM}{r} \cdot v~.
+\Delta\phi \approx \frac{4GM}{r} \cdot v~.
 \label{eq-v}
 \end{equation}
 Here $M$ is the mass of the lens, $r$ is the impact parameter---the shortest distance when the light ray pass near the lens, and $v$ is the velocity of the lens.  
@@ -133,7 +133,7 @@ We take the difference between these two measurements, which is exactly a loop i
 \int_{A_1}^{A_2} \hat{p}^a e_0^b \Gamma_{ab}^c dl~.
 \label{eq-pulsar}
 \end{equation}
-The integral $B_1B_2$ and $A_1A_2$ are along timelike trajectory of the pulsar and the earth, which are effectively in the asymptotic region and nothing happens. 
+The integral $B_1B_2$ and $A_1A_2$ are along timelike trajectories of the pulsar and the earth, which are effectively in the asymptotic region and nothing happens. 
 The integral $A_1B_1$ is along a light ray without the influence of the companion. 
 Thus the above loop integral is indeed calculating the rotation of polarization caused by the passage of the companion.
 
@@ -143,7 +143,7 @@ Thus the above loop integral is indeed calculating the rotation of polarization 
 
 Eq.~(\ref{eq-int}) is derived from a basic form of a vector multiplied by a small rotation matrix.
 \begin{equation}
-e^c = e_0^c + \Delta e^c = R^c_{\ b} e_0^b = 
+e^c = e_0^c + \Delta e^c = \Lambda^c_{\ b} e_0^b = 
 \left( g^c_{\ b} + \Delta^c_{\ b} \right) e_0^b~,
 \end{equation}
 where
@@ -154,12 +154,13 @@ By definition of a rotation matrix, $\Delta_{cd}$ has to be anti-symmetric, whic
 \begin{eqnarray}
 \Delta_{ac} = \int k^b\Gamma_{ab}^d g_{cd}d\lambda &=& 
 \frac{1}{2} \int k^b \left(\partial_a g_{bc} + \partial_bg_{ac} - \partial_c g_{ab}\right)d\lambda
+\label{eq-Delta}
 \\ \nonumber
 &=& \frac{1}{2} \int k^b \left(\partial_a g_{bc} - \partial_c g_{ab}\right)d\lambda~.
 \end{eqnarray}
 Note that we have to drop the boundary term for this anti-symmetry, which is allowed because this is effectively a loop integral as we explained in the previous section.
 
-This tells us that there is actually a full $SO(3,1)$ rotation, $R_{ab}\approx\left(g_{ab} + \Delta_{ab}\right)$, that is associated with a light ray. 
+This tells us that there is actually a full $SO(3,1)$ rotation, $\Lambda_{ab}\approx\left(g_{ab} + \Delta_{ab}\right)$, that is associated with a light ray. 
 This does not uniquely determine the polarization rotation, which is an $SO(2)$. 
 It also contains extra information such as the deflection of the light ray itself. 
 One needs to specify two polarization vectors to determine which $SO(2)$ to project to. 
@@ -179,6 +180,64 @@ All we know are the polarizations we received on earth, so that is the unique 4-
 \section{Explicit calculation}
 \label{sec-Sch}
 
+We will treat the gravitational lens as a point mass and model it with a Schwarzschild metric in the isotropic form, expanded to the leading order of $(M/r)$. 
+The newton constant $G$ is conveniently set to 1.
+\begin{eqnarray}
+g_{ab}dx^adx^b &=& -\left(1-\frac{2M}{r}\right)dt^2 + \left(1+\frac{2M}{r}\right)\left(dx^2+dy^2+dz^2\right)~, \\
+r^2 &=& x^2 + y^2 + z^2~.
+\label{eq-SchIso}
+\end{eqnarray}
+Instead of studying an arbitrary light ray in the above coordinate, we will shift and boost the above metric such that the lens as arbitrary position and velocity, and the relevant light ray is aways $x=t$.
+This means six parameters, $(x_0,y_0,z_0,v_x,v_y,v_z)$, which we will use symmetries to reduce down to three.
+
+First of all, a simultaneous shift in $x$ and $t$ allows us to set $x_0=0$. This simply means that we define $t=0$ to be the time when the light way is closest to the lens.
+Next, we can set $v_x=0$. 
+This means that instead of letting the lens to have an $x$-velocity, the asymptotic observer who measures the polarization will have a nonzero $x$-velocity. 
+This changes nothing because the light ray is in the $x$ direction, $k^\mu = (1,1,0,0)$.
+Independent of what $x$-velocity the observer has, the plane orthogonal to both the light ray and the observer will be the $y$-$z$ plane.
+Thus we are always calculation the rotation of polarization on the $y$-$z$ plane.
+Finally, using rotational symmetry on the $y$-$z$ plan, we can set $v_z=0$, thus the remaining three parameters are $v_y=v$, $y_0$ and $z_0$. The implies coordinate transformation from Eq.~(\ref{eq-SchIso}) is given by
+\begin{eqnarray}
+\gamma = (1-v^2)^{-1/2}~, \ \ t \rightarrow \gamma(t-vy)~, \ \ y\rightarrow \gamma(y-vt-y_0)~, \ \
+z\rightarrow (z-z_0)~.
+\end{eqnarray}
+The resulting metric becomes
+\begin{eqnarray}
+g_{ab}dx^adx^b &=& -\left[1-\gamma^2(1+v^2)\frac{2M}{r}\right]dt^2   
++ \left[1+\gamma^2(1+v^2)\frac{2M}{r}\right]dy^2 
+\label{eq-metric}
+\\ \nonumber
+& & - \frac{8Mv\gamma^2}{r}dtdy + \left(1+\frac{2M}{r}\right)(dx^2+dz^2)~, \\
+r^2 &=& \gamma^2(y-vt-y_0)^2 + x^2 + (z-z_0)^2~.
+\end{eqnarray}
+
+While calculating the connections,
+\begin{equation}
+\Gamma_{ab}^c = \frac{g^{cd}}{2}\left(\partial_a g_{bd} + \partial_b g_{ad} - \partial_d g_{ab} \right)~,
+\end{equation}
+we can treat the first $g^{cd}$ as the flat metric $\eta^{cd}$ since we are only keeping the leading order result. 
+This applies to any $g^{ab}$ that is not hit by a derivative in the calculation, for example the one in Eq.~(\ref{eq-Delta}).
+We also assume that both the null ray direction and the polarization direction are only changed by a small amount (the Born approximation). 
+Thus we can compute $\Delta_{ab}$ by Eq.~(\ref{eq-Delta}) along the undeflected light ray $x=t$.
+Many components of $g_{ab}$ are zero due to our symmetry choice, so it is straightforward to see that
+\begin{equation}
+\Delta_{zy} = -\Delta_{yz} = \frac{1}{2}\int_{-\infty}^{\infty} dt \partial_z g_{ty}
+=-2Mv\gamma^2 z_0 \int_{-\infty}^{\infty}
+\frac{dt}{\left[\gamma^2(vt+y_0)^2+t^2 + z_0^2\right]^{3/2}}~.
+\end{equation}
+
+For $v\ll1$, we can perform the integral and keeping only the leading order value to get 
+\begin{equation}
+\Delta\phi \equiv |\Delta_{yz}| \approx \frac{4Mvz_0}{y_0^2 + z_0^2}
+= \frac{4|J_x|}{r^2}~.
+\end{equation}
+Here $J$ is the lens' angular momentum component in the $x$ direction--the direction of the light ray, with respect to $x=0$--the point where the light ray was closest to the lens. Such generalization is directly follows from our symmetry choice.
+
+Furthermore, assume that many light rays keep coming in the $x$ direction, then a different light ray, $t = x-y_0/v$, will go through $x=0$ when the lens is the closest.
+\begin{equation}
+\Delta \phi_{Max} = \frac{4M}{z_0}v~.
+\end{equation}
+This is the promised result in Eq.~(\ref{eq-v}).
 
 \section{Example: Double Pulsar}
 \label{sec-prediction}
