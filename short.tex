@@ -180,6 +180,8 @@ All we know are the polarizations we received on earth, so that is the unique 4-
 \section{Explicit calculation}
 \label{sec-Sch}
 
+\subsection{Point Mass}
+
 We will treat the gravitational lens as a point mass and model it with a Schwarzschild metric in the isotropic form, expanded to the leading order of $(M/r)$. 
 The newton constant $G$ is conveniently set to 1.
 \begin{eqnarray}
@@ -208,7 +210,7 @@ g_{ab}dx^adx^b &=& -\left[1-\gamma^2(1+v^2)\frac{2M}{r}\right]dt^2
 \label{eq-metric}
 \\ \nonumber
 & & - \frac{8Mv\gamma^2}{r}dtdy + \left(1+\frac{2M}{r}\right)(dx^2+dz^2)~, \\
-r^2 &=& \gamma^2(y-vt-y_0)^2 + x^2 + (z-z_0)^2~.
+r &=& \sqrt{ \gamma^2(y-vt-y_0)^2 + x^2 + (z-z_0)^2 }~.
 \end{eqnarray}
 
 While calculating the connections,
@@ -233,11 +235,34 @@ For $v\ll1$, we can perform the integral and keeping only the leading order valu
 \end{equation}
 Here $J$ is the lens' angular momentum component in the $x$ direction--the direction of the light ray, with respect to $x=0$--the point where the light ray was closest to the lens. Such generalization is directly follows from our symmetry choice.
 
-Furthermore, assume that many light rays keep coming in the $x$ direction, then a different light ray, $t = x-y_0/v$, will go through $x=0$ when the lens is the closest.
+Furthermore, assume that many light rays keep coming in the $x$ direction while the lens is moving in the constant velocity.
+Then we will get maximal rotation at the light ray which is closest to the lens, which corresponds to $y_0=0$ in the above calculation.
 \begin{equation}
-\Delta \phi_{Max} = \frac{4M}{z_0}v~.
+\Delta \phi_{Max} = \frac{4M}{z_0}v = \frac{4M}{r}v~.
 \end{equation}
 This is the promised result in Eq.~(\ref{eq-v}).
+
+\subsection{General Case}
+
+The above point-mass calculation assumes that it carries no angular momentum. Many paper employed a Kerr metric instead to calculate how angular momentum also contributes to the rotation of polarization. In the limit of small rotations, we can instead generalize the above result without explicitly using the Kerr metric. That is because Eq.~(\ref{eq-metric}) allows superposition when all lenses are not moving too fast and not too close to the light ray. The metric of multiple moving point masses are given by
+\begin{eqnarray}
+g_{ab}dx^adx^b &=& -\left( 1 - 2\sum_n \frac{m^{(n)}}{r^{(n)}} \right)dt^2
++\left( 1 + 2\sum_n \frac{m^{(n)}}{r^{(n)}} \right)(dx^2+dy^2+dz^2)
+\\ \nonumber 
+& & -8\sum_i \frac{m^{(n)} }{r^{(n)}}
+\left(v^{(n)}_x dx + v^{(n)}_y dy+ v^{(n)}_z dz\right)~, \\
+r^{(n)} &=& \sqrt{\left(x - x_0^{(n)} - v^{(n)}_x t\right)^2 + \left(y - y_0^{(n)} - v^{(n)}_y t\right)^2 
++ \left(z - z_0^{(n)} - v^{(n)}_z t\right)^2}~.
+\end{eqnarray}
+
+Their contributions to the total rotation also superimpose linearly.
+\begin{equation}
+\Delta\phi = 4 \left| \sum_n \frac{J_x^{(n)}}{\left(r^{(n)}\right)^2} \right|
+\label{eq-combine}
+\end{equation}
+
+This provides the general answer to any mass and velocity distribution. As a special example, one can arrange a ball-like distribution of point masses with some specific values of total mass and total angular momentum.  At the leading order, this should give the same result as an explicit calculation using the Kerr metric.
+
 
 \section{Example: Double Pulsar}
 \label{sec-prediction}
