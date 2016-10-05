@@ -60,7 +60,7 @@ Unless the velocity is almost relativistic, the second factor is small.
 Luckily, an almost edge-on, compact pulsar binary system, such as the double pulsar PSR J0737-3039, can be a very strong candidate to measure such effect. 
 Pulsar signals are often highly polarized, allowing precise measurements of its rotation; 
 an almost edge-on orbit allows the impact parameter to be very small at the superior conjunction; 
-and its compact orbit means a large velocity. 
+its compact orbit means a large velocity. 
 One main point of this paper is to show that one can expect to have $\Delta\phi\sim 10^{-7}$ from double pulsar, which has a good chance to be observable given a realistic observation campaign.
 
 Gravitational rotation of polarization from double pulsar was previously studied in \cite{RugTar06}. 
@@ -141,7 +141,7 @@ Thus the above loop integral is indeed calculating the rotation of polarization 
 
 \subsection{Observer Dependence}
 
-Eq.~(\ref{eq-int}) is derived from a basic form of a vector multiplied by a small rotation matrix.
+Eq.~(\ref{eq-int}) is the leading order effect of a small rotation matrix.
 \begin{equation}
 e^c = e_0^c + \Delta e^c = \Lambda^c_{\ b} e_0^b = 
 \left( g^c_{\ b} + \Delta^c_{\ b} \right) e_0^b~,
@@ -189,16 +189,16 @@ g_{ab}dx^adx^b &=& -\left(1-\frac{2M}{r}\right)dt^2 + \left(1+\frac{2M}{r}\right
 r^2 &=& x^2 + y^2 + z^2~.
 \label{eq-SchIso}
 \end{eqnarray}
-Instead of studying an arbitrary light ray in the above coordinate, we will shift and boost the above metric such that the lens as arbitrary position and velocity, and the relevant light ray is aways $x=t$.
+Instead of studying an arbitrary light ray in the above coordinate, we will shift and boost the above metric such that the lens has arbitrary position and velocity, and the relevant light ray is aways $x=t$.
 This means six parameters, $(x_0,y_0,z_0,v_x,v_y,v_z)$, which we will use symmetries to reduce down to three.
 
-First of all, a simultaneous shift in $x$ and $t$ allows us to set $x_0=0$. This simply means that we define $t=0$ to be the time when the light way is closest to the lens.
+First we use shift symmetries in $x$ and $t$ to set $x_0=0$. This simply means that we define $t=0$ to be the time when the light ray is closest to the lens.
 Next, we can set $v_x=0$. 
 This means that instead of letting the lens to have an $x$-velocity, the asymptotic observer who measures the polarization will have a nonzero $x$-velocity. 
 This changes nothing because the light ray is in the $x$ direction, $k^\mu = (1,1,0,0)$.
 Independent of what $x$-velocity the observer has, the plane orthogonal to both the light ray and the observer will be the $y$-$z$ plane.
-Thus we are always calculation the rotation of polarization on the $y$-$z$ plane.
-Finally, using rotational symmetry on the $y$-$z$ plan, we can set $v_z=0$, thus the remaining three parameters are $v_y=v$, $y_0$ and $z_0$. The implies coordinate transformation from Eq.~(\ref{eq-SchIso}) is given by
+Thus we are always calculating the rotation of polarization on the $y$-$z$ plane.
+Finally, using rotational symmetry on the $y$-$z$ plan, we can set $v_z=0$, thus the remaining three parameters are $v_y=v$, $y_0$ and $z_0$. The required coordinate transformation from Eq.~(\ref{eq-SchIso}) is given by
 \begin{eqnarray}
 \gamma = (1-v^2)^{-1/2}~, \ \ t \rightarrow \gamma(t-vy)~, \ \ y\rightarrow \gamma(y-vt-y_0)~, \ \
 z\rightarrow (z-z_0)~.
@@ -228,12 +228,13 @@ Many components of $g_{ab}$ are zero due to our symmetry choice, so it is straig
 \frac{dt}{\left[\gamma^2(vt+y_0)^2+t^2 + z_0^2\right]^{3/2}}~.
 \end{equation}
 
-For $v\ll1$, we can perform the integral and keeping only the leading order value to get 
+For $v\ll1$, we can perform the integral and keep only the leading order value to get 
 \begin{equation}
 \Delta\phi \equiv |\Delta_{yz}| \approx \frac{4Mvz_0}{y_0^2 + z_0^2}
 = \frac{4|J_x|}{r^2}~.
 \end{equation}
-Here $J$ is the lens' angular momentum component in the $x$ direction--the direction of the light ray, with respect to $x=0$--the point where the light ray was closest to the lens. Such generalization is directly follows from our symmetry choice.
+Here $J$ is the lens' angular momentum component in the $x$ direction---the direction of the light ray, with respect to $x=0$---the point where the light ray was closest to the lens. 
+Such generalization follows directly from our symmetry choice.
 
 Furthermore, assume that many light rays keep coming in the $x$ direction while the lens is moving in the constant velocity.
 Then we will get maximal rotation at the light ray which is closest to the lens, which corresponds to $y_0=0$ in the above calculation.
@@ -244,7 +245,11 @@ This is the promised result in Eq.~(\ref{eq-v}).
 
 \subsection{General Case}
 
-The above point-mass calculation assumes that it carries no angular momentum. Many paper employed a Kerr metric instead to calculate how angular momentum also contributes to the rotation of polarization. In the limit of small rotations, we can instead generalize the above result without explicitly using the Kerr metric. That is because Eq.~(\ref{eq-metric}) allows superposition when all lenses are not moving too fast and not too close to the light ray. The metric of multiple moving point masses are given by
+The above point-mass calculation assumes that it carries no spin. 
+Many papers employed a Kerr metric instead to calculate how the angular momentum from the spin also contributes to the rotation of polarization. 
+In the limit of small rotations, we can instead generalize the above result without explicitly using the Kerr metric. 
+That is because Eq.~(\ref{eq-metric}) allows superposition when all lenses are not moving too fast and not too close to the light ray. 
+The metric of multiple moving point masses are given by
 \begin{eqnarray}
 g_{ab}dx^adx^b &=& -\left( 1 - 2\sum_n \frac{m^{(n)}}{r^{(n)}} \right)dt^2
 +\left( 1 + 2\sum_n \frac{m^{(n)}}{r^{(n)}} \right)(dx^2+dy^2+dz^2)
@@ -257,15 +262,31 @@ r^{(n)} &=& \sqrt{\left(x - x_0^{(n)} - v^{(n)}_x t\right)^2 + \left(y - y_0^{(n
 
 Their contributions to the total rotation also superimpose linearly.
 \begin{equation}
-\Delta\phi = 4 \left| \sum_n \frac{J_x^{(n)}}{\left(r^{(n)}\right)^2} \right|
+\Delta\phi = 4 \left| \sum_n \frac{v_y^{(n)}z_0^{(n)} - v_z^{(n)}y_0^{(n)}}
+{\left(y_0^{(n)}\right)^2+\left(z_0^{(n)}\right)^2} \right|
 \label{eq-combine}
 \end{equation}
 
-This provides the general answer to any mass and velocity distribution. As a special example, one can arrange a ball-like distribution of point masses with some specific values of total mass and total angular momentum.  At the leading order, this should give the same result as an explicit calculation using the Kerr metric.
+This provides the general answer to any mass and velocity distribution. 
+By the uniqueness theorem, the effect from a Kerr metric of mass $M$ and spin $S$ can be mimicked by a two-particle system at the leading order.
+\begin{eqnarray}
+v_z^{(1)} &=& v_z^{(2)} = 0~,  \ \ \ v_y^{(1)} = v -\delta v~, \ \ \ v_y^{(2)} = v + \delta v~, \nonumber \\
+y_0^{(1)} &=& y_0^{(2)} = y_0~, \ \ \ z_0^{(1)} = z_0-d~, \ \ \ z_0^{(2)} = z_0 + d~, \\
+m^{(1)} &=& m^{(2)} = M/2~, \ \ \ S = M (\delta v) d~. \nonumber
+\end{eqnarray}
+
+\begin{eqnarray}
+\Delta \phi = \frac{vz_0 - \delta v z_0 - vd}{y_0^2 + z_0^2 - 2z_0d}
+\end{eqnarray}
 
 
 \section{Example: Double Pulsar}
 \label{sec-prediction}
+
+
+\section{Known Disagreement/Confusions}
+
+
 
 \bibliography{all_active}
 
