@@ -1,4 +1,4 @@
-\begin{thebibliography}{3}
+\begin{thebibliography}{4}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \expandafter\ifx\csname bibnamefont\endcsname\relax
   \def\bibnamefont#1{#1}\fi
@@ -32,5 +32,11 @@
   \bibnamefont{and} \bibinfo{author}{\bibfnamefont{D.~R.} \bibnamefont{Terno}},
   \bibinfo{journal}{Phys. Rev.} \textbf{\bibinfo{volume}{D84}},
   \bibinfo{pages}{104043} (\bibinfo{year}{2011}), \eprint{1108.0973}.
+
+\bibitem[{\citenamefont{Sereno}(2005)}]{Ser04}
+\bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{Sereno}},
+  \bibinfo{journal}{Mon. Not. Roy. Astron. Soc.}
+  \textbf{\bibinfo{volume}{356}}, \bibinfo{pages}{381} (\bibinfo{year}{2005}),
+  \eprint{astro-ph/0410015}.
 
 \end{thebibliography}

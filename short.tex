@@ -95,7 +95,7 @@ Let {\bf k} be the null vector of the light ray and {\bf e} be a polarization ve
 \begin{equation}
 k^a \nabla_a e^c = k^a \partial_a e^c + k^a e^b \Gamma_{ab}^c =0~.
 \end{equation}
-Thus when the rotation is small, using the Born approximation, integrating along a light ray from point A to point B leads to
+When the rotation is small, using the Born approximation, integrating along a light ray from point A to point B leads to
 \begin{equation}
 \Delta e^c = \int_A^B \hat{k}^a e_0^b \Gamma_{ab}^c~dl~,
 \label{eq-int}
@@ -118,8 +118,8 @@ Now if we have a light ray starts from point A and reaches point B, both in asym
  \int_B^A \hat{p}^a e_0^b \Gamma_{ab}^c dl~.
 \label{eq-loop}
 \end{equation}
-The second term is a line integral from B back to A which stays in the asymptotic Minkowski part of the spacetime. 
-It contributes exactly zero value, therefore it allows a well-defined loop integral to be assigned as the physical rotation of a line integral from A to B.
+The second integral follows a path from B back to A which stays in the asymptotic Minkowski part of the spacetime. 
+It contributes exactly zero value, therefore it allows us to assign the physical rotation in this loop to line integral from A to B.
 
 An actual observation works very similarly to Eq.~(\ref{eq-loop}). 
 What we have is a source (pulsar) which constantly emits a fixed (albeit unknown) polarization. 
@@ -127,7 +127,8 @@ We measure the polarization during a usual time, which is a light ray from $A_1$
 And then we compare it with the polarization measured when its binary companion passes very close to the light of sight, which is another light ray from $A_2$ to $B_2$. 
 We take the difference between these two measurements, which is exactly a loop integral.
 \begin{equation}
-\Delta e^c = \int_{A_2}^{B_2} \hat{k}^a e_0^b \Gamma_{ab}^c~dl +
+\Delta e^c = e^c|_{\rm at \ B_2} - e^c|_{\rm at \ B_1}
+= \int_{A_2}^{B_2} \hat{k}^a e_0^b \Gamma_{ab}^c~dl +
 \int_{B_2}^{B_1} \hat{p}^a e_0^b \Gamma_{ab}^c dl +
 \int_{B_1}^{A_1} \hat{k}^a e_0^b \Gamma_{ab}^c~dl +
 \int_{A_1}^{A_2} \hat{p}^a e_0^b \Gamma_{ab}^c dl~.
@@ -169,8 +170,8 @@ Thus a projection to the co-dimension-two surface orthogonal to the light ray an
 {\bf Therefore, it is natural and necessary that polarization rotation depends on the observer velocity}, which explains the $v$ dependence in Eq.~(\ref{eq-v}).
 
 One last possible confusion is why such dependence is on the velocity of the observer instead of the source, since they seem to play equivalent roles in the integral of Eq.~(\ref{eq-int}). 
-We remind the reader again that the apparent line integral in Eq.~(\ref{eq-int}) is a convenient illusion. 
-The physically meaningful is always along a loop, where one sends out a polarization vector and waits for it to come back to see the difference. 
+We remind the readers that the apparent line integral in Eq.~(\ref{eq-int}) is a convenient illusion. 
+The physically meaningful rotation is along a loop, where one sends out a polarization vector and waits for it to come back to see the difference. 
 Thus there is one unique point at which the rotation is defined. 
 In practice, we will have no idea about the actual polarization when the signal is emitted at the pulsar. 
 All we know are the polarizations we received on earth, so that is the unique 4-velocity we care about.
@@ -231,15 +232,20 @@ Many components of $g_{ab}$ are zero due to our symmetry choice, so it is straig
 For $v\ll1$, we can perform the integral and keep only the leading order value to get 
 \begin{equation}
 \Delta\phi \equiv |\Delta_{yz}| \approx \frac{4Mvz_0}{y_0^2 + z_0^2}
-= \frac{4|J_x|}{r^2}~.
+= \frac{4|J_x|}{r_0^2}
+= \frac{4 M |k\cdot(r_0\times v)|}{r_0^2}~.
+\label{eq-gen}
 \end{equation}
-Here $J$ is the lens' angular momentum component in the $x$ direction---the direction of the light ray, with respect to $x=0$---the point where the light ray was closest to the lens. 
-Such generalization follows directly from our symmetry choice.
+Here $J$ is the lens' angular momentum with respect to $x=0$---the point where the light ray was closest to the lens.
+The direction of the light ray $k^a$ determines which component of $J$ we care about, which is the $x$-component in our symmetry choice.
+The final, generalized format of Eq.~(\ref{eq-gen}) should be straightforward from our symmetry choice.
+A more explicit calculation in \cite{KopMas01} led to the same result.
 
 Furthermore, assume that many light rays keep coming in the $x$ direction while the lens is moving in the constant velocity.
 Then we will get maximal rotation at the light ray which is closest to the lens, which corresponds to $y_0=0$ in the above calculation.
+
 \begin{equation}
-\Delta \phi_{Max} = \frac{4M}{z_0}v = \frac{4M}{r}v~.
+\Delta \phi_{Max} = \frac{4M}{z_0}v ~.
 \end{equation}
 This is the promised result in Eq.~(\ref{eq-v}).
 
@@ -249,7 +255,7 @@ The above point-mass calculation assumes that it carries no spin.
 Many papers employed a Kerr metric instead to calculate how the angular momentum from the spin also contributes to the rotation of polarization. 
 In the limit of small rotations, we can instead generalize the above result without explicitly using the Kerr metric. 
 That is because Eq.~(\ref{eq-metric}) allows superposition when all lenses are not moving too fast and not too close to the light ray. 
-The metric of multiple moving point masses are given by
+At the leading order (ignoring sub-leading velocity terms), the metric of multiple moving point masses are given by
 \begin{eqnarray}
 g_{ab}dx^adx^b &=& -\left( 1 - 2\sum_n \frac{m^{(n)}}{r^{(n)}} \right)dt^2
 +\left( 1 + 2\sum_n \frac{m^{(n)}}{r^{(n)}} \right)(dx^2+dy^2+dz^2)
@@ -260,25 +266,28 @@ r^{(n)} &=& \sqrt{\left(x - x_0^{(n)} - v^{(n)}_x t\right)^2 + \left(y - y_0^{(n
 + \left(z - z_0^{(n)} - v^{(n)}_z t\right)^2}~.
 \end{eqnarray}
 
-Their contributions to the total rotation also superimpose linearly.
+Their contributions to the total rotation also superimpose linearly. 
+If we further assume that the masses are distributed in a small enough region, the answer is very simple. 
 \begin{equation}
-\Delta\phi = 4 \left| \sum_n \frac{v_y^{(n)}z_0^{(n)} - v_z^{(n)}y_0^{(n)}}
-{\left(y_0^{(n)}\right)^2+\left(z_0^{(n)}\right)^2} \right|
+\Delta\phi = 4 \left| \sum_n m^{(n)} \frac{v_y^{(n)}z_0^{(n)} - v_z^{(n)}y_0^{(n)}}
+{\left(y_0^{(n)}\right)^2+\left(z_0^{(n)}\right)^2} \right|~.
 \label{eq-combine}
 \end{equation}
+Since their velocities are small, they are roughly in the same location after the light ray goes through all of them, thus $x_0^{(n)}$ do not matter at all. 
 
-This provides the general answer to any mass and velocity distribution. 
+Under these assumptions, Eq.~(\ref{eq-combine}) provides the general answer to any mass and velocity distribution. 
 By the uniqueness theorem, the effect from a Kerr metric of mass $M$ and spin $S$ can be mimicked by a two-particle system at the leading order.
 \begin{eqnarray}
 v_z^{(1)} &=& v_z^{(2)} = 0~,  \ \ \ v_y^{(1)} = v -\delta v~, \ \ \ v_y^{(2)} = v + \delta v~, \nonumber \\
 y_0^{(1)} &=& y_0^{(2)} = y_0~, \ \ \ z_0^{(1)} = z_0-d~, \ \ \ z_0^{(2)} = z_0 + d~, \\
 m^{(1)} &=& m^{(2)} = M/2~, \ \ \ S = M (\delta v) d~. \nonumber
 \end{eqnarray}
-
+Taking $d\rightarrow0$ while holding $S$ fixed, we get
 \begin{eqnarray}
-\Delta \phi = \frac{vz_0 - \delta v z_0 - vd}{y_0^2 + z_0^2 - 2z_0d}
+\Delta \phi = 4\left|\frac{Mvz_0 + S}{y_0^2 + z_0^2}\right| = 4 \frac{\left| J_x + S_x \right|}{r_0^2}~.
+\label{eq-spin}
 \end{eqnarray}
-
+The spin of the point mass contributes in exactly the same way as its ``orbital'' angular momentum around the light ray. Intriguingly, although \cite{KopMas01} agrees with Eq.~(\ref{eq-gen}), they claimed that the spin does not contribute at all. We cannot see any physical reason for such disagreement since Eq.~(\ref{eq-spin}) seems to be the most natural result.
 
 \section{Example: Double Pulsar}
 \label{sec-prediction}
@@ -286,6 +295,10 @@ m^{(1)} &=& m^{(2)} = M/2~, \ \ \ S = M (\delta v) d~. \nonumber
 
 \section{Known Disagreement/Confusions}
 
+\begin{itemize}
+\item Kopeikin and Mashhoon \cite{KopMas01} agrees with the orbital angular momentum contribution, Eq.~(\ref{eq-gen}), but disagrees with the spin contribution, Eq.~(\ref{eq-spin}).
+\item The previous estimation by Ruggiero and Tartaglia \cite{RugTar06} cited an equation from \cite{Ser04} which was clearly given as ``sub-leading correction''. It is suppressed by two factors of $M$ instead of one.
+\end{itemize}
 
 
 \bibliography{all_active}
