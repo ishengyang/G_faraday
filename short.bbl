@@ -1,4 +1,4 @@
-\begin{thebibliography}{4}
+\begin{thebibliography}{5}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \expandafter\ifx\csname bibnamefont\endcsname\relax
   \def\bibnamefont#1{#1}\fi
@@ -19,11 +19,10 @@
   \textbf{\bibinfo{volume}{374}}, \bibinfo{pages}{847} (\bibinfo{year}{2007}),
   \eprint{astro-ph/0609712}.
 
-\bibitem[{\citenamefont{Kopeikin and Mashhoon}(2002)}]{KopMas01}
-\bibinfo{author}{\bibfnamefont{S.}~\bibnamefont{Kopeikin}} \bibnamefont{and}
-  \bibinfo{author}{\bibfnamefont{B.}~\bibnamefont{Mashhoon}},
-  \bibinfo{journal}{Phys. Rev.} \textbf{\bibinfo{volume}{D65}},
-  \bibinfo{pages}{064025} (\bibinfo{year}{2002}), \eprint{gr-qc/0110101}.
+\bibitem[{\citenamefont{{Skrotskii}}(1957)}]{Skr57}
+\bibinfo{author}{\bibfnamefont{G.~V.} \bibnamefont{{Skrotskii}}},
+  \bibinfo{journal}{Soviet Physics Doklady} \textbf{\bibinfo{volume}{2}},
+  \bibinfo{pages}{226} (\bibinfo{year}{1957}).
 
 \bibitem[{\citenamefont{Brodutch et~al.}(2011)\citenamefont{Brodutch, Demarie,
   and Terno}}]{BroDem11}
@@ -32,6 +31,12 @@
   \bibnamefont{and} \bibinfo{author}{\bibfnamefont{D.~R.} \bibnamefont{Terno}},
   \bibinfo{journal}{Phys. Rev.} \textbf{\bibinfo{volume}{D84}},
   \bibinfo{pages}{104043} (\bibinfo{year}{2011}), \eprint{1108.0973}.
+
+\bibitem[{\citenamefont{Kopeikin and Mashhoon}(2002)}]{KopMas01}
+\bibinfo{author}{\bibfnamefont{S.}~\bibnamefont{Kopeikin}} \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{B.}~\bibnamefont{Mashhoon}},
+  \bibinfo{journal}{Phys. Rev.} \textbf{\bibinfo{volume}{D65}},
+  \bibinfo{pages}{064025} (\bibinfo{year}{2002}), \eprint{gr-qc/0110101}.
 
 \bibitem[{\citenamefont{Sereno}(2005)}]{Ser04}
 \bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{Sereno}},
