@@ -11,7 +11,8 @@
 
 \begin{document}
 
-\title{Predicting the gravitational polarization rotation of the binary pulsar}
+\title{Gravitational rotation of polarization: \\ 
+Clarifying the gauge dependence and prediction for double pulsar}
 
 \author{Ue-Li Pen}
 \email{pen@cita.utoronto.ca}
@@ -30,7 +31,10 @@
 \affiliation{Perimeter Institute of Theoretical Physics, 31 Caroline Street North, Waterloo, ON N2L 2Y5, Canada.}
 
 \begin{abstract}
-Some abstract stuffs.
+From the basic concept of general relativity, we derive how the polarization of light can be rotated by a moving gravitational lens. 
+We resolve existing confusion in the literature by showing and explaining why such rotation must explicitly depend on the relative motion between the observer and the lens. 
+We update the prediction of such effect on the double pulsar and estimate a rotation angle $\sim 10^{-7}rad$. 
+This is 10 orders of magnitude larger than the previous prediction by Ruggiero and Tartaglia \cite{RugTar06}, which was misguided by the confusion in the literature.
 \end{abstract}
 
 \maketitle
@@ -38,11 +42,9 @@ Some abstract stuffs.
 \section{Introduction}
 
 Einstein's theory of General Relativity has been the dominant theory of gravity for a century. 
-Many of its signature outcomes, such as light-bending, orbital precession, and gravitational waves, have been confirmed by precision tests from both astronomy and cosmology. 
-{\bf XXX do we trouble ourselves to find those citations?}
+Many of its signature outcomes, such as light-bending, orbital precession, and gravitational waves, have been confirmed by precision tests in astronomy \cite{DysEdd20,KraSta97,WeiTay04,Abb16}. 
 One last pending test is the gravitational rotation of polarizations. 
-Indeed, since gravity directly affects the spacetime geometry, not only the paths of light can be bent.  
-Polarizations, often thought as ``internal'' degrees of freedom of the light ray, cannot escape the influence of gravity either.
+Since gravity directly affects the spacetime geometry, one gravitational lens not only can bend the light ray, it may also rotate the polarization.
 
 Such gravitational rotation of polarization has not been measured so far.
 \footnote{The E-mode and B-mode in CMB are defined as the relative angle between polarization and gradient. 
@@ -65,7 +67,7 @@ One main point of this paper is to show that one can expect to have $\Delta\phi\
 
 Gravitational rotation of polarization from double pulsar was previously studied in \cite{RugTar06}. 
 They however derived a much smaller number which is incorrect. 
-In fact, the basic, theoretical derivations of this rotation of polarization has been in a state of chaos since its first appearance in \cite{Skr57}.
+In fact, the basic, theoretical derivations of this rotation of polarization has developed into a state of chaos since its first appearance in \cite{Skr57}.
 It was summarized in \cite{BroDem11} that three different values of $\Delta\phi$ can be derived from existing literature for identical physical situation.
 Many authors disagreed on ``whether there is a nonzero rotation in Schwarzschild metric'', while none of them correctly pointed out that it is not even a well-defined question to ask, as we will show in this paper.
 Although Eq.~(\ref{eq-v}) has been derived by some authors, such as in \cite{KopMas01}, they did not explicitly explain why it is the correct result. 
@@ -81,8 +83,8 @@ Therefore, one cannot simply ask whether there are rotations in Schwarzschild me
 For an observer at rest, there is indeed zero rotation.
 For a moving observer, there will be a nonzero rotation.
 
-In Sec.\ref{sec-born}, we will provide the operational definition of polarization from the basic principles in general relativity.
-In Sec.\ref{sec-Sch}, we will derive Eq.~(\ref{eq-v}) in the Schwarzschild metric.
+In Sec.\ref{sec-born}, we will provide the operational definition of polarization from the basic principles in general relativity and explain the inevitable gauge dependence.
+In Sec.\ref{sec-Sch}, we will derive Eq.~(\ref{eq-v}) in the small rotation limit for one point-mass lens, and show that it can be generalized into multiple lenses.
 In Sec.\ref{sec-prediction}, we will describe the observable effects on double pulsar and discuss the appropriate observation campaign to detect it.
 
 \section{Definition from Scratch}
@@ -94,6 +96,7 @@ Intuitively, one can imagine two linear polarizations as two vectors attached to
 Let {\bf k} be the null vector of the light ray and {\bf e} be a polarization vector, a parallel transport of {\bf e} should be valid in the geometric optic limit.
 \begin{equation}
 k^a \nabla_a e^c = k^a \partial_a e^c + k^a e^b \Gamma_{ab}^c =0~.
+\label{eq-para}
 \end{equation}
 When the rotation is small, using the Born approximation, integrating along a light ray from point A to point B leads to
 \begin{equation}
@@ -151,7 +154,7 @@ where
 \begin{equation}
 \Delta_{cb} = \int_A^B \hat{k}^a \Gamma^d_{ab} g_{cd}dl~.
 \end{equation}
-By definition of a rotation matrix, $\Delta_{cd}$ has to be anti-symmetric, which can be verified explicitly.
+By definition of a rotation matrix, $\Delta_{cb}$ has to be anti-symmetric, which can be verified explicitly.
 \begin{eqnarray}
 \Delta_{ac} = \int k^b\Gamma_{ab}^d g_{cd}d\lambda &=& 
 \frac{1}{2} \int k^b \left(\partial_a g_{bc} + \partial_bg_{ac} - \partial_c g_{ab}\right)d\lambda
@@ -161,10 +164,10 @@ By definition of a rotation matrix, $\Delta_{cd}$ has to be anti-symmetric, whic
 \end{eqnarray}
 Note that we have to drop the boundary term for this anti-symmetry, which is allowed because this is effectively a loop integral as we explained in the previous section.
 
-This tells us that there is actually a full $SO(3,1)$ rotation, $\Lambda^a_{\ b}\approx\left(g^a_{\ b} + \Delta^a_{\ b}\right)$, that is associated with a light ray. 
+This tells us that there is actually a full $SO(3,1)$ rotation, $\Lambda^a_{\ b}\approx\left(g^a_{\ b} + \Delta^a_{\ b}\right)$, that is associated with a light ray which starts and ends in asymptotic Minkowski region. 
 This does not uniquely determine the polarization rotation, which is an $SO(2)$. 
 It also contains extra information such as the deflection of the light ray itself. 
-One needs to specify two polarization vectors to determine which $SO(2)$ to project to. 
+One needs to specify a two-dimensional plane of polarization to determine which $SO(2)$ to project to. 
 For any observer, the polarization vectors are orthogonal to both the incoming light ray and its own worldline. 
 Thus a projection to the co-dimension-two surface orthogonal to the light ray and the observer 4-velocity is the desired $SO(2)$ rotation of polarization. 
 {\bf Therefore, it is natural and necessary that polarization rotation depends on the observer velocity}, which explains the $v$ dependence in Eq.~(\ref{eq-v}).
@@ -176,7 +179,25 @@ Thus there is one unique point at which the rotation is defined.
 In practice, we will have no idea about the actual polarization when the signal is emitted at the pulsar. 
 All we know are the polarizations we received on earth, so that is the unique 4-velocity we care about.
 
+\subsection{Beyond Born Approximation}
 
+The actual effect we will calculate in the rest of this paper will be quite small, so Born approximation is quite justified. 
+Nevertheless, the above abstract explanation must still be true beyond the Born approximation, and we will spend this subsection to demonstrate that. 
+
+It is straightforward to actually solve the parallel transport equation, Eq.~(\ref{eq-para}), instead of using the Born-approximation integral in Eq.~(\ref{eq-int}). 
+A loop-parallel transport back to the same point is obviously an $SO(3,1)$ rotation.
+So one can see up to getting the $SO(3,1)$ rotation, everything we said in the previous section directly generalizes beyond Born approximation.
+The only question is that we have used the unique $k^\mu$ to determine the $SO(2)$ projection in the Born approximation.
+Now the direction of light is also deflected significantly, $k^\mu \rightarrow k'^\mu$. 
+Do we still have an unambiguous way to determine which $SO(2)$ to project into?
+
+The answer is yes, and this is how we do it. 
+First of all, the observer's 4-velocity reduces $SO(3,1)$ down to $SO(3)$.
+The light rays, before and after the deflection, $k$ and $k'$, are also reduced down to two spacelike vectors in the observer's frame, $\kappa$ and $\kappa'$.
+As long as $\kappa\neq-\kappa'$, there is a unique, minimal $SO(3)$ rotation that aligns them.
+\footnote{Note that there are many rotations which can align them, but there is a unique minimal rotation, that is rotating along the direction orthogonal to both of them, $(\kappa\times\kappa')$.}
+Aligning $\kappa$ and $\kappa'$ also put their polarization vectors into the same plane, in which an $SO(2)$ rotation is uniquely defined. 
+Thus, one can see that even beyond Born approximation, the rotation of polarization is still a well-defined, unambiguous, observer-dependent $SO(2)$ projection of a gauge-invariant $SO(3,1)$.
 
 \section{Explicit calculation}
 \label{sec-Sch}

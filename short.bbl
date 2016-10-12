@@ -1,4 +1,4 @@
-\begin{thebibliography}{5}
+\begin{thebibliography}{9}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \expandafter\ifx\csname bibnamefont\endcsname\relax
   \def\bibnamefont#1{#1}\fi
@@ -11,6 +11,47 @@
 \expandafter\ifx\csname urlprefix\endcsname\relax\def\urlprefix{URL }\fi
 \providecommand{\bibinfo}[2]{#2}
 \providecommand{\eprint}[2][]{\url{#2}}
+
+\bibitem[{\citenamefont{{Dyson} et~al.}(1920)\citenamefont{{Dyson},
+  {Eddington}, and {Davidson}}}]{DysEdd20}
+\bibinfo{author}{\bibfnamefont{F.~W.} \bibnamefont{{Dyson}}},
+  \bibinfo{author}{\bibfnamefont{A.~S.} \bibnamefont{{Eddington}}},
+  \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{C.}~\bibnamefont{{Davidson}}},
+  \bibinfo{journal}{Philosophical Transactions of the Royal Society of London
+  Series A} \textbf{\bibinfo{volume}{220}}, \bibinfo{pages}{291}
+  (\bibinfo{year}{1920}).
+
+\bibitem[{\citenamefont{Kramer et~al.}(2006)\citenamefont{Kramer, Stairs,
+  Manchester, McLaughlin, Lyne, Ferdman, Burgay, Lorimer, Possenti,
+  D{\textquoteright}Amico et~al.}}]{KraSta97}
+\bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{Kramer}},
+  \bibinfo{author}{\bibfnamefont{I.~H.} \bibnamefont{Stairs}},
+  \bibinfo{author}{\bibfnamefont{R.~N.} \bibnamefont{Manchester}},
+  \bibinfo{author}{\bibfnamefont{M.~A.} \bibnamefont{McLaughlin}},
+  \bibinfo{author}{\bibfnamefont{A.~G.} \bibnamefont{Lyne}},
+  \bibinfo{author}{\bibfnamefont{R.~D.} \bibnamefont{Ferdman}},
+  \bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{Burgay}},
+  \bibinfo{author}{\bibfnamefont{D.~R.} \bibnamefont{Lorimer}},
+  \bibinfo{author}{\bibfnamefont{A.}~\bibnamefont{Possenti}},
+  \bibinfo{author}{\bibfnamefont{N.}~\bibnamefont{D{\textquoteright}Amico}},
+  \bibnamefont{et~al.}, \bibinfo{journal}{Science}
+  \textbf{\bibinfo{volume}{314}}, \bibinfo{pages}{97} (\bibinfo{year}{2006}),
+  ISSN \bibinfo{issn}{0036-8075},
+  \eprint{http://science.sciencemag.org/content/314/5796/97.full.pdf},
+  \urlprefix\url{http://science.sciencemag.org/content/314/5796/97}.
+
+\bibitem[{\citenamefont{Weisberg and Taylor}(2005)}]{WeiTay04}
+\bibinfo{author}{\bibfnamefont{J.~M.} \bibnamefont{Weisberg}} \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{J.~H.} \bibnamefont{Taylor}},
+  \bibinfo{journal}{ASP Conf. Ser.} \textbf{\bibinfo{volume}{328}},
+  \bibinfo{pages}{25} (\bibinfo{year}{2005}), \eprint{astro-ph/0407149}.
+
+\bibitem[{\citenamefont{Abbott et~al.}(2016)}]{Abb16}
+\bibinfo{author}{\bibfnamefont{B.~P.} \bibnamefont{Abbott}}
+  \bibnamefont{et~al.} (\bibinfo{collaboration}{Virgo, LIGO Scientific}),
+  \bibinfo{journal}{Phys. Rev. Lett.} \textbf{\bibinfo{volume}{116}},
+  \bibinfo{pages}{061102} (\bibinfo{year}{2016}), \eprint{1602.03837}.
 
 \bibitem[{\citenamefont{Ruggiero and Tartaglia}(2007)}]{RugTar06}
 \bibinfo{author}{\bibfnamefont{M.~L.} \bibnamefont{Ruggiero}} \bibnamefont{and}
