@@ -31,7 +31,7 @@ Clarifying the gauge dependence and prediction for double pulsar}
 \affiliation{Perimeter Institute of Theoretical Physics, 31 Caroline Street North, Waterloo, ON N2L 2Y5, Canada.}
 
 \begin{abstract}
-From the basic concept of general relativity, we derive how the polarization of light can be rotated by a moving gravitational lens. 
+From the basic concept of general relativity, we derive how one can observe the polarization of light being rotated by a moving gravitational lens. 
 We resolve existing confusion in the literature by showing and explaining why such rotation must explicitly depend on the relative motion between the observer and the lens. 
 We update the prediction of such effect on the double pulsar and estimate a rotation angle $\sim 10^{-7}rad$. 
 This is 10 orders of magnitude larger than the previous prediction by Ruggiero and Tartaglia \cite{RugTar06}, which was misguided by the confusion in the literature.
@@ -68,14 +68,14 @@ One main point of this paper is to show that one can expect to have $\Delta\phi\
 Gravitational rotation of polarization from double pulsar was previously studied in \cite{RugTar06}. 
 They however derived a much smaller number which is incorrect. 
 In fact, the basic, theoretical derivations of this rotation of polarization has developed into a state of chaos since its first appearance in \cite{Skr57}.
-It was summarized in \cite{BroDem11} that three different values of $\Delta\phi$ can be derived from existing literature for identical physical situation.
+It was summarized in \cite{BroDem11} that three different values of $\Delta\phi$ can be derived from existing literature for seemingly identical physical situations.
 Many authors disagreed on ``whether there is a nonzero rotation in Schwarzschild metric'', while none of them correctly pointed out that it is not even a well-defined question to ask, as we will show in this paper.
 Although Eq.~(\ref{eq-v}) has been derived by some authors, such as in \cite{KopMas01}, they did not explicitly explain why it is the correct result. 
 
 In this paper, we will resolve the confusions by deriving Eq.~(\ref{eq-v}) from the very basic concept of general relativity---parallel transports. 
 The root of doubts to Eq.~(\ref{eq-v}) all come from its apparent gauge-dependence, since the velocity $v$ depends on which frame we choose. 
 It turns out that there is a gauge-invariant $SO(3,1)$ gravitational rotation of the tangent space along any light ray that starts and ends in asymptotic Minkowski space. 
-However the rotation of polarization is an $SO(2)$ projection of that. 
+However, the rotation of polarization any observer actually measures, is an $SO(2)$ projection of the $SO(3,1)$. 
 The null vector of the light ray and the timelike vector of the observer together determines which $SO(2)$ to project to.
  {\it Thus it is only natural that the actual rotation of polarization depends on the frame of the observer. }
 The $v$ in Eq.~(\ref{eq-v}) is supposed to be the relative velocity between the observer and the lens.
@@ -83,8 +83,8 @@ Therefore, one cannot simply ask whether there are rotations in Schwarzschild me
 For an observer at rest, there is indeed zero rotation.
 For a moving observer, there will be a nonzero rotation.
 
-In Sec.\ref{sec-born}, we will provide the operational definition of polarization from the basic principles in general relativity and explain the inevitable gauge dependence.
-In Sec.\ref{sec-Sch}, we will derive Eq.~(\ref{eq-v}) in the small rotation limit for one point-mass lens, and show that it can be generalized into multiple lenses.
+In Sec.\ref{sec-born}, we will provide the operational definition of polarization rotation from the basic principles in general relativity and explain the inevitable observer-dependence.
+In Sec.\ref{sec-Sch}, we will derive Eq.~(\ref{eq-v}) in the small rotation limit for one non-rotating point-mass lens, and show that it can be generalized into multiple lenses even with spins.
 In Sec.\ref{sec-prediction}, we will describe the observable effects on double pulsar and discuss the appropriate observation campaign to detect it.
 
 \section{Definition from Scratch}
@@ -92,7 +92,7 @@ In Sec.\ref{sec-prediction}, we will describe the observable effects on double p
 
 \subsection{Operational Definition}
 
-Intuitively, one can imagine two linear polarizations as two vectors attached to a light ray. 
+Intuitively, one can imagine the polarization as a vector attached to a light ray that is spacelike and orthogonal to the direction of propagation. 
 Let {\bf k} be the null vector of the light ray and {\bf e} be a polarization vector, a parallel transport of {\bf e} should be valid in the geometric optic limit.
 \begin{equation}
 k^a \nabla_a e^c = k^a \partial_a e^c + k^a e^b \Gamma_{ab}^c =0~.
@@ -274,7 +274,7 @@ This is the promised result in Eq.~(\ref{eq-v}).
 
 The above point-mass calculation assumes that it carries no spin. 
 Many papers employed a Kerr metric instead to calculate how the angular momentum from the spin also contributes to the rotation of polarization. 
-In the limit of small rotations, we can instead generalize the above result without explicitly using the Kerr metric. 
+In the limit of small rotations, we can instead generalize the above result without explicitly starting from a Kerr metric. 
 That is because Eq.~(\ref{eq-metric}) allows superposition when all lenses are not moving too fast and not too close to the light ray. 
 At the leading order (ignoring sub-leading velocity terms), the metric of multiple moving point masses are given by
 \begin{eqnarray}
@@ -288,7 +288,7 @@ r^{(n)} &=& \sqrt{\left(x - x_0^{(n)} - v^{(n)}_x t\right)^2 + \left(y - y_0^{(n
 \end{eqnarray}
 
 Their contributions to the total rotation also superimpose linearly. 
-If we further assume that the masses are distributed in a small enough region, the answer is very simple. 
+If we further assume that the masses are distributed in a small enough region (such that their locations stay the same during the passage of the light ray), the answer is very simple. 
 \begin{equation}
 \Delta\phi = 4 \left| \sum_n m^{(n)} \frac{v_y^{(n)}z_0^{(n)} - v_z^{(n)}y_0^{(n)}}
 {\left(y_0^{(n)}\right)^2+\left(z_0^{(n)}\right)^2} \right|~.
@@ -308,11 +308,38 @@ Taking $d\rightarrow0$ while holding $S$ fixed, we get
 \Delta \phi = 4\left|\frac{Mvz_0 + S}{y_0^2 + z_0^2}\right| = 4 \frac{\left| J_x + S_x \right|}{r_0^2}~.
 \label{eq-spin}
 \end{eqnarray}
-The spin of the point mass contributes in exactly the same way as its ``orbital'' angular momentum around the light ray. Intriguingly, although \cite{KopMas01} agrees with Eq.~(\ref{eq-gen}), they claimed that the spin does not contribute at all. We cannot see any physical reason for such disagreement since Eq.~(\ref{eq-spin}) seems to be the most natural result.
+The spin of the point mass contributes in exactly the same way as its ``orbital'' angular momentum around the light ray. Intriguingly, although \cite{KopMas01} agrees with Eq.~(\ref{eq-gen}), they claimed that the spin does not contribute at all. We cannot see any physical reason for such statement since Eq.~(\ref{eq-spin}) seems to be the most natural result.
 
 \section{Example: Double Pulsar}
 \label{sec-prediction}
 
+\subsection{Estimation}
+
+Before we put in the actual number of the binary pulsar, let us first give a rough estimation on the maximal rotation we can get from a nearly edge-on binary neutron star system.
+We take the radius of the lens neutron star to be $30km$.
+If it is a slow pulsar, we take the spin period to be about $1s$.
+Recall that the Schwarzschild radius of the sun is roughly $3km$, we first estimate the spin contribution in Eq.~(\ref{eq-spin}) as
+\begin{equation}
+S_x \sim 3km \times \frac{30km/1s}{c} \times 30km \sim 10^4 m^2~.
+\end{equation}
+We have used both $c$ and $G$ to make this quantity to have the unit of length$^2$, which makes it easier to calculate the unitless $\Delta\phi$.
+Similarly, assume the binary orbit is $10^9 m$, velocity is about $0.1\%$ speed of light, and the orbital tilt is $2$ degree, the orbital contribution is roughly
+\begin{equation}
+J_x \sim 0.1\% \times 3km \times 10^9 m \times\left( \frac{4\pi}{360} \right) \sim 10^7 m^2~.
+\end{equation}
+In this case, the spin contribution is negligible.
+
+If the lens is a recycled (fast) neutron star, then the period would be $\sim 1ms$, and its spin angular momentum is increased by a factor of $100$.
+It will still only be $10\%$ of the orbital contribution.
+
+The maximal rotation angle is roughly
+\begin{equation}
+\Delta\phi \sim 4 \frac{10^7 m^2}{\left[10^9m\times\left(\frac{4\pi}{360}\right)\right]^2}
+\end{equation}
+
+{\bf XXX:} Xin, please improve my number to be closer to the actual values.
+
+\subsection{Prediction}
 
 \section{Known Disagreement/Confusions}
 
