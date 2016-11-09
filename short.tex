@@ -139,9 +139,13 @@ We take the difference between these two measurements, which is exactly a loop i
 \end{equation}
 The integral $B_1B_2$ and $A_1A_2$ are along timelike trajectories of the pulsar and the earth, which are effectively in the asymptotic region and nothing happens. 
 The integral $A_1B_1$ is along a light ray without the influence of the companion. 
-Thus the above loop integral is indeed calculating the rotation of polarization caused by the passage of the companion.
+Thus the above loop integral is indeed calculating the rotation of polarization caused by the passage of the companion, as we can see in Fig.\ref{fig:loop}.
 
-{\bf XXX need a figure here}
+\begin{figure}
+\includegraphics[width=0.6\textwidth]{loop.pdf}
+\caption{\label{fig:loop}
+Parallel transport along a loop contains 4 segments: bent light ray (solid), worldline of the pulsar (thick, green, left), worldline of the observer (thick, green, right), and an unbent light ray (dashed, bottom). It leads to an $SO(3,1)$ rotation of the tangent space. It contains the information of both deflection of light (from $k_\mu$ to $k'_\mu$) and the rotation of polarization, $\Delta\phi$. In practice, we can measure this effect by comparing the pulsar signal when the companion passes through the line-of-site (solid line) to the same signal in other times (dotted line).}
+\end{figure}
 
 \subsection{Observer Dependence}
 
@@ -181,12 +185,12 @@ All we know are the polarizations we received on earth, so that is the unique 4-
 
 \subsection{Beyond Born Approximation}
 
-The actual effect we will calculate in the rest of this paper will be quite small, so Born approximation is quite justified. 
+The actual effect we will calculate in the rest of this paper will be quite small, so Born approximation is justified. 
 Nevertheless, the above abstract explanation must still be true beyond the Born approximation, and we will spend this subsection to demonstrate that. 
 
 It is straightforward to actually solve the parallel transport equation, Eq.~(\ref{eq-para}), instead of using the Born-approximation integral in Eq.~(\ref{eq-int}). 
 A loop-parallel transport back to the same point is obviously an $SO(3,1)$ rotation.
-So one can see up to getting the $SO(3,1)$ rotation, everything we said in the previous section directly generalizes beyond Born approximation.
+So one can see that up to getting the $SO(3,1)$ rotation, everything we said in the previous section directly generalizes beyond Born approximation.
 The only question is that we have used the unique $k^\mu$ to determine the $SO(2)$ projection in the Born approximation.
 Now the direction of light is also deflected significantly, $k^\mu \rightarrow k'^\mu$. 
 Do we still have an unambiguous way to determine which $SO(2)$ to project into?
