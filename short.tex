@@ -144,7 +144,7 @@ Thus the above loop integral is indeed calculating the rotation of polarization 
 \begin{figure}
 \includegraphics[width=0.6\textwidth]{loop.pdf}
 \caption{\label{fig:loop}
-Parallel transport along a loop contains 4 segments: bent light ray (solid), worldline of the pulsar (thick, green, left), worldline of the observer (thick, green, right), and an unbent light ray (dashed, bottom). It leads to an $SO(3,1)$ rotation of the tangent space. It contains the information of both deflection of light (from $k_\mu$ to $k'_\mu$) and the rotation of polarization, $\Delta\phi$. In practice, we can measure this effect by comparing the pulsar signal when the companion passes through the line-of-site (solid line) to the same signal in other times (dotted line).}
+Parallel transport along a loop contains 4 segments: bent light ray (solid), worldline of the pulsar (thick, green, left), worldline of the observer (thick, green, right), and an unbent light ray (dashed, bottom). It leads to an $SO(3,1)$ rotation of the tangent space. It contains the information of both deflection of light (from $k_\mu$ to $k'_\mu$) and the rotation of polarization, $\Delta\phi$. In practice, we can measure this effect by comparing the pulsar signal when the companion neutron star (blue dot) passes through the line-of-site (solid line) to the same signal in other times (dotted line).}
 \end{figure}
 
 \subsection{Observer Dependence}
@@ -316,6 +316,56 @@ The spin of the point mass contributes in exactly the same way as its ``orbital'
 
 
 
+
+
+
+
+
+
+\section{Example: Double Pulsar}
+\label{sec-prediction}
+
+\subsection{Estimation}
+
+Before putting in the actual numbers, let us first give a rough estimation on the maximal rotation we can get from the double pulsar system.
+Recall that the Schwarzschild radius of the sun is roughly $3km$, and these neutron stars are slightly larger.
+A typical neutron star is slightly smaller than 10 times its own Schwarzschild radius, so we take the radius of the lens neutron star to be $30km$.
+If it is a slow pulsar, we take the spin period to be about $1s$.
+If the spin aligns with the line of sight, we estimate its contribution in Eq.~(\ref{eq-spin}) as
+\begin{equation}
+S_x \sim 3km \times \frac{30km/1s}{c} \times 30km \sim 10^4 m^2~.
+\end{equation}
+We have used both $c$ and $G$ to make this quantity to have the unit of length$^2$, which makes it easier to calculate the unitless $\Delta\phi$.
+Similarly, assume the binary orbit is $10^9 m$, velocity is about $0.1\%$ speed of light, and the orbital tilt is $2$ degree, the orbital contribution is roughly
+\begin{equation}
+J_x \sim 0.1\% \times 3km \times 10^9 m \times\left( \frac{4\pi}{360} \right) \sim 10^7 m^2~.
+\end{equation}
+In this case, the spin contribution is negligible.
+
+If the lens is a recycled (fast) neutron star, its the period would be $\sim 1ms$, and its spin angular momentum is increased by a factor of $100$.
+If it is also aligned with the line of sight, the spin contribution will be $10\%$ of the orbital contribution, which is no-longer negligible.
+Fortunately, fast pulsars are usually spun-up by accretion from the companion, so its spin is usually aligned with the orbital plane.
+In our case, that means the spin is almost perpendicular to the line-of-sight, so its contribution is again negligible.
+
+We can estimate the maximal rotation from the orbital contribution only, which is about\begin{equation}
+\Delta\phi \sim 4 \frac{10^7 m^2}{\left[10^9m\times\left(\frac{4\pi}{360}\right)\right]^2}\sim 3*10^{-8}~.
+\end{equation}
+The actual value is slightly larger, as we will show in the next session.
+
+{\bf XXX: Xin, please see if you need to improve my number to be closer to the actual values.}
+
+\subsection{Prediction}
+
+We use the astrometric parameters from \cite{KraSta97}. 
+We ignore the spin contribution since they are negligible as we explained in the previous section. 
+The results are given in Fig.\ref{fig:rotang}. 
+We can see that during a rotation period, we can expect a maximal rotation of polarization ($\Delta\phi$) at about $10^{-7} rad$. 
+This happens when the companion (lens) is almost in front of the pulsar.
+It is well-known that at this moment, there will also be an eclipse, so one may worry that we cannot actually see this maximal rotation.
+We specifically zoomed in and blacked-out the eclipsed.
+We found that the peak of the $\Delta\phi$ curve is significantly wider than the eclipse duration.
+Thus for a (relatively) long duration before and after the eclipse, we can still observe $\Delta\phi\sim10^{-7}rad$.
+
 \begin{figure}
 \includegraphics[width=\textwidth]{rotang.eps}
 \caption{\label{fig:rotang}
@@ -330,49 +380,12 @@ real inclination angle.
  }
 \end{figure}
 
+%\section{Known Disagreement/Confusions}
 
-
-
-
-
-
-\section{Example: Double Pulsar}
-\label{sec-prediction}
-
-\subsection{Estimation}
-
-Before we put in the actual number of the binary pulsar, let us first give a rough estimation on the maximal rotation we can get from a nearly edge-on binary neutron star system.
-We take the radius of the lens neutron star to be $30km$.
-If it is a slow pulsar, we take the spin period to be about $1s$.
-Recall that the Schwarzschild radius of the sun is roughly $3km$, we first estimate the spin contribution in Eq.~(\ref{eq-spin}) as
-\begin{equation}
-S_x \sim 3km \times \frac{30km/1s}{c} \times 30km \sim 10^4 m^2~.
-\end{equation}
-We have used both $c$ and $G$ to make this quantity to have the unit of length$^2$, which makes it easier to calculate the unitless $\Delta\phi$.
-Similarly, assume the binary orbit is $10^9 m$, velocity is about $0.1\%$ speed of light, and the orbital tilt is $2$ degree, the orbital contribution is roughly
-\begin{equation}
-J_x \sim 0.1\% \times 3km \times 10^9 m \times\left( \frac{4\pi}{360} \right) \sim 10^7 m^2~.
-\end{equation}
-In this case, the spin contribution is negligible.
-
-If the lens is a recycled (fast) neutron star, then the period would be $\sim 1ms$, and its spin angular momentum is increased by a factor of $100$.
-It will still only be $10\%$ of the orbital contribution.
-
-The maximal rotation angle is roughly
-\begin{equation}
-\Delta\phi \sim 4 \frac{10^7 m^2}{\left[10^9m\times\left(\frac{4\pi}{360}\right)\right]^2}
-\end{equation}
-
-{\bf XXX:} Xin, please improve my number to be closer to the actual values.
-
-\subsection{Prediction}
-
-\section{Known Disagreement/Confusions}
-
-\begin{itemize}
-\item Kopeikin and Mashhoon \cite{KopMas01} agrees with the orbital angular momentum contribution, Eq.~(\ref{eq-gen}), but disagrees with the spin contribution, Eq.~(\ref{eq-spin}).
-\item The previous estimation by Ruggiero and Tartaglia \cite{RugTar06} cited an equation from \cite{Ser04} which was clearly given as ``sub-leading correction''. It is suppressed by two factors of $M$ instead of one.
-\end{itemize}
+%\begin{itemize}
+%\item Kopeikin and Mashhoon \cite{KopMas01} agrees with the orbital angular momentum contribution, Eq.~(\ref{eq-gen}), but disagrees with the spin contribution, Eq.~(\ref{eq-spin}).
+%\item The previous estimation by Ruggiero and Tartaglia \cite{RugTar06} cited an equation from \cite{Ser04} which was clearly given as ``sub-leading correction''. It is suppressed by two factors of $M$ instead of one.
+%\end{itemize}
 
 
 \bibliography{all_active}
