@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  4 DEC 2016 12:28
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  4 DEC 2016 17:51
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -325,13 +325,13 @@ Package epstopdf Info: Source file: <rotang.eps>
 (epstopdf)                    size: 128793 bytes
 (epstopdf)             Command: <repstopdf --outfile=rotang-eps-converted-to.pd
 f rotang.eps>
-(epstopdf)             \includegraphics on input line 369.
+(epstopdf)             \includegraphics on input line 376.
 Package epstopdf Info: Output file is already uptodate.
  <rotang-eps-converted-to.pdf, id=57, 1478.52374pt x 803.0pt>
 File: rotang-eps-converted-to.pdf Graphic file (type pdf)
 
 <use rotang-eps-converted-to.pdf>
-Package pdftex.def Info: rotang-eps-converted-to.pdf used on input line 369.
+Package pdftex.def Info: rotang-eps-converted-to.pdf used on input line 376.
 (pdftex.def)             Requested size: 510.0pt x 276.98628pt.
  (./short.bbl [7 <./rotang-eps-converted-to.pdf>]
 Underfull \hbox (badness 2460) in paragraph at lines 28--43
@@ -386,7 +386,7 @@ ve/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive
 /texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/local/texlive/2016/t
 exmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb></usr/local/texlive/2016/tex
 mf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb>
-Output written on short.pdf (8 pages, 451902 bytes).
+Output written on short.pdf (8 pages, 445575 bytes).
 PDF statistics:
  151 PDF objects out of 1000 (max. 8388607)
  108 compressed objects within 2 object streams

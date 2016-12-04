@@ -215,15 +215,13 @@ r^2 &=& x^2 + y^2 + z^2~,
 \end{eqnarray}
 where the Newton constant $G$ is conveniently set to $1$.
 Instead of studying an arbitrary light ray in the above coordinate, we will shift and boost this metric such that the lens has arbitrary position and velocity, and the relevant light ray is aways $x=t$.
-This means six parameters, $(x_0,y_0,z_0,v_x,v_y,v_z)$, which we will use symmetries to reduce down to three.
-
-First we use shift symmetries in $x$ and $t$ to set $x_0=0$. This simply means that we define $t=0$ to be the time when the light ray is closest to the lens.
-Next, we can set $v_x=0$. 
-This means that instead of letting the lens to have an $x$-velocity, the asymptotic observer who measures the polarization will have a nonzero $x$-velocity. 
+In principle, we need six parameters, i.e. $(x_0,y_0,z_0,v_x,v_y,v_z)$. However, 
+by applying symmetries, we could further simplify the problem so that eventually only three will be needed. 
+First we use shift symmetries in $x$ and $t$ to set $x_0=0$, which simply means that $t=0$ is defined as the time when the light ray is closest to the lens. Next, we set $v_x=0$, so instead of letting the lens to have an $x$-velocity, the asymptotic observer who measures the polarization will have a nonzero $x$-velocity. 
 This changes nothing because the light ray is in the $x$ direction, $k^\mu = (1,1,0,0)$.
 Independent of what $x$-velocity the observer has, the plane orthogonal to both the light ray and the observer will be the $y$-$z$ plane.
 Thus we are always calculating the rotation of polarization on the $y$-$z$ plane.
-Finally, using rotational symmetry on the $y$-$z$ plan, we can set $v_z=0$, thus the remaining three parameters are $v_y=v$, $y_0$ and $z_0$. The required coordinate transformation from Eq.~(\ref{eq-SchIso}) is given by
+Finally, using rotational symmetry on the $y$-$z$ plan, we can set $v_z=0$, leaving the remaining three parameters to be $v_y=v$, $y_0$ and $z_0$. The required coordinate transformation from Eq.~(\ref{eq-SchIso}) is given by
 \begin{eqnarray}
 \gamma = (1-v^2)^{-1/2}~, \ \ t \rightarrow \gamma(t-vy)~, \ \ y\rightarrow \gamma(y-vt-y_0)~, \ \
 z\rightarrow (z-z_0)~.
@@ -243,10 +241,10 @@ While calculating the connections,
 \Gamma_{ab}^c = \frac{g^{cd}}{2}\left(\partial_a g_{bd} + \partial_b g_{ad} - \partial_d g_{ab} \right)~,
 \end{equation}
 we can treat the first $g^{cd}$ as the flat metric $\eta^{cd}$ since we are only keeping the leading order result. 
-This applies to any $g^{ab}$ that is not hit by a derivative in the calculation, for example the one in Eq.~(\ref{eq-Delta}).
-We also assume that both the null ray direction and the polarization direction are only changed by a small amount (the Born approximation). 
+This applies to any $g^{ab}$ that is not hit by a derivative in the calculation, e.g. the one in Eq.~(\ref{eq-Delta}).
+We also assume that both the null ray direction and the polarization direction are only changed by a small amount, i.e. the Born approximation. 
 Thus we can compute $\Delta_{ab}$ by Eq.~(\ref{eq-Delta}) along the undeflected light ray $x=t$.
-Many components of $g_{ab}$ are zero due to our symmetry choice, so it is straightforward to see that
+Many components of $g_{ab}$ are zero due to our choice of symmetries, so it is straightforward to see that
 \begin{equation}
 \Delta_{zy} = -\Delta_{yz} = \frac{1}{2}\int_{-\infty}^{\infty} dt \partial_z g_{ty}
 =-2Mv\gamma^2 z_0 \int_{-\infty}^{\infty}
@@ -260,7 +258,7 @@ For $v\ll1$, we can perform the integral and keep only the leading order value t
 = \frac{4 M |k\cdot(r_0\times v)|}{r_0^2}~.
 \label{eq-gen}
 \end{equation}
-Here $J$ is the lens' angular momentum with respect to $x=0$---the point where the light ray was closest to the lens.
+Here $J$ is the lens' angular momentum with respect to $x=0$, i.e. the point where the light ray was closest to the lens.
 The direction of the light ray $k^a$ determines which component of $J$ we care about, which is the $x$-component in our symmetry choice.
 The final, generalized format of Eq.~(\ref{eq-gen}) should be straightforward from our symmetry choice.
 A more explicit calculation in \cite{KopMas01} led to the same result.
@@ -291,7 +289,7 @@ r^{(n)} &=& \sqrt{\left(x - x_0^{(n)} - v^{(n)}_x t\right)^2 + \left(y - y_0^{(n
 \end{eqnarray}
 
 Their contributions to the total rotation also superimpose linearly. 
-If we further assume that the masses are distributed in a small enough region (such that their locations stay the same during the passage of the light ray), the answer is very simple. 
+If we further assume that the masses are distributed in a small enough region such that their locations stay the same during the passage of the light ray, the answer is very simple. 
 \begin{equation}
 \Delta\phi = 4 \left| \sum_n m^{(n)} \frac{v_y^{(n)}z_0^{(n)} - v_z^{(n)}y_0^{(n)}}
 {\left(y_0^{(n)}\right)^2+\left(z_0^{(n)}\right)^2} \right|~.
@@ -332,12 +330,14 @@ A typical neutron star is slightly smaller than 10 times its own Schwarzschild r
 If it is a slow pulsar, we take the spin period to be about $1s$.
 If the spin aligns with the line of sight, we estimate its contribution in Eq.~(\ref{eq-spin}) as
 \begin{equation}
-S_x \sim 3km \times \frac{30km/1s}{c} \times 30km \sim 10^4 m^2~.
+|S_x|  \sim  3km \times \frac{30km/1s}{c} \times 30km \sim 10^4 m^2~. \nonumber \\
+{\color{red}   
+}
 \end{equation}
 We have used both $c$ and $G$ to make this quantity to have the unit of length$^2$, which makes it easier to calculate the unitless $\Delta\phi$.
-Similarly, assume the binary orbit is $10^9 m$, velocity is about $0.1\%$ speed of light, and the orbital tilt is $2$ degree, the orbital contribution is roughly
+Similarly, assume the binary orbit is $10^9 m$, velocity is about $0.1\%$ speed of light, and the orbital tilt is $2$ degree, so the impact parameter is roughly $10^9 \times 2\pi/180 \approx 3.5 \times 10^7 m$, then the orbital contribution is roughly
 \begin{equation}
-J_x \sim 0.1\% \times 3km \times 10^9 m \times\left( \frac{4\pi}{360} \right) \sim 10^7 m^2~.
+|J_x| \approx  3km \times 10^{-3} \times 10^9 \times 2\pi/180  \approx 10^7 m^2~.
 \end{equation}
 In this case, the spin contribution is negligible.
 
@@ -347,15 +347,22 @@ Fortunately, fast pulsars are usually spun-up by accretion from the companion, s
 In our case, that means the spin is almost perpendicular to the line-of-sight, so its contribution is again negligible.
 
 We can estimate the maximal rotation from the orbital contribution only, which is about\begin{equation}
-\Delta\phi \sim 4 \frac{10^7 m^2}{\left[10^9m\times\left(\frac{4\pi}{360}\right)\right]^2}\sim 3*10^{-8}~.
+\Delta\phi \approx 4 \frac{10^7 m^2}{\left[  10^9m\times  2\pi / 180 \right]^2}\approx 3*10^{-8}~.
 \end{equation}
 The actual value is slightly larger, as we will show in the next session.
 
-{\bf XXX: Xin, please see if you need to improve my number to be closer to the actual values.}
+%{\bf XXX: Xin, please see if you need to improve my number to be closer to the actual values.}
+
+
+
 
 \subsection{Prediction}
+In Fig.~(\ref{fig:rotang}), we calculated the signal $\Delta \phi$ using the orbital information of double pulsar system PSR J0737-3039 \cite{KraSta97}. 
 
-We use the astrometric parameters from \cite{KraSta97}. 
+
+
+
+
 We ignore the spin contribution since they are negligible as we explained in the previous section. 
 The results are given in Fig.\ref{fig:rotang}. 
 We can see that during a rotation period, we can expect a maximal rotation of polarization ($\Delta\phi$) at about $10^{-7} rad$. 
