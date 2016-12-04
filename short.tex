@@ -31,10 +31,12 @@ Clarifying the gauge dependence and prediction for double pulsar}
 \affiliation{Perimeter Institute of Theoretical Physics, 31 Caroline Street North, Waterloo, ON N2L 2Y5, Canada.}
 
 \begin{abstract}
-From the basic concept of general relativity, we derive how one can observe the polarization of light being rotated by a moving gravitational lens. 
-We resolve existing confusion in the literature by showing and explaining why such rotation must explicitly depend on the relative motion between the observer and the lens. 
-We update the prediction of such effect on the double pulsar and estimate a rotation angle $\sim 10^{-7}rad$. 
-This is 10 orders of magnitude larger than the previous prediction by Ruggiero and Tartaglia \cite{RugTar06}, which was misguided by the confusion in the literature.
+From the basic concept of general relativity, we investigate the rotation of the polarization angle by a moving 
+gravitational lens. 
+Particularly, we clarify the existing confusion in the literature by showing and explaining why such rotation must explicitly depend on the relative motion between the observer and the lens. 
+We update the prediction of such effect on the double pulsar PSR J0737-3039 and estimate a rotation angle 
+of $\sim 10^{-7}rad$. 
+Despite its tiny signal, this is $10$ orders of magnitude larger than the previous prediction by Ruggiero and Tartaglia \cite{RugTar06}, which apparently was misguided by the confusion in the literature. 
 \end{abstract}
 
 \maketitle
@@ -43,9 +45,8 @@ This is 10 orders of magnitude larger than the previous prediction by Ruggiero a
 
 Einstein's theory of General Relativity has been the dominant theory of gravity for a century. 
 Many of its signature outcomes, such as light-bending, orbital precession, and gravitational waves, have been confirmed by precision tests in astronomy \cite{DysEdd20,KraSta97,WeiTay04,Abb16}. 
-One last pending test is the gravitational rotation of polarizations. 
-Since gravity directly affects the spacetime geometry, one gravitational lens not only can bend the light ray, it may also rotate the polarization.
-
+One of last pending tests is the gravitational rotation of the polarization angle. 
+Since gravity directly affects the spacetime geometry, a gravitational lens not only can bend the light ray, it may also rotate the polarization.
 Such gravitational rotation of polarization has not been measured so far.
 \footnote{The E-mode and B-mode in CMB are defined as the relative angle between polarization and gradient. 
 The observed rotation is a consequence of a rotated gradient but a fixed polarization, thus it does not count.} 
@@ -65,27 +66,29 @@ an almost edge-on orbit allows the impact parameter to be very small at the supe
 its compact orbit means a large velocity. 
 One main point of this paper is to show that one can expect to have $\Delta\phi\sim 10^{-7}$ from double pulsar, which might be observable given a dedicated observation campaign.
 
-Gravitational rotation of polarization from double pulsar was previously studied in \cite{RugTar06}. 
+The gravitational rotation of polarization from this double pulsar system was previously studied by \cite{RugTar06}. 
 They however derived a much smaller number which is incorrect. 
-In fact, the basic, theoretical derivations of this rotation of polarization has developed into a state of chaos since its first appearance in \cite{Skr57}.
-It was summarized in \cite{BroDem11} that three different values of $\Delta\phi$ can be derived from existing literature for seemingly identical physical situations.
+In fact, various theoretical derivations of this rotation of polarization have probably bring more confusion  %developed into a state of chaos 
+than clarity since its first appearance in \cite{Skr57}.
+{\color{blue} It was summarized in \cite{BroDem11} that three different values of $\Delta\phi$ can be derived from existing literature for seemingly identical physical situations.
 Many authors disagreed on ``whether there is a nonzero rotation in Schwarzschild metric'', while none of them correctly pointed out that it is not even a well-defined question to ask, as we will show in this paper.
-Although Eq.~(\ref{eq-v}) has been derived by some authors, such as in \cite{KopMas01}, they did not explicitly explain why it is the correct result. 
+Although Eq.~(\ref{eq-v}) has been derived by some authors, such as in \cite{KopMas01}, they did not explicitly explain why it is the correct result. }
+{\color{red} (Xin) be careful, also mention papers that got this right, e.g. Dai (2004) }
 
 In this paper, we will resolve the confusions by deriving Eq.~(\ref{eq-v}) from the very basic concept of general relativity---parallel transports. 
 The root of doubts to Eq.~(\ref{eq-v}) all come from its apparent gauge-dependence, since the velocity $v$ depends on which frame we choose. 
 It turns out that there is a gauge-invariant $SO(3,1)$ gravitational rotation of the tangent space along any light ray that starts and ends in asymptotic Minkowski space. 
-However, the rotation of polarization any observer actually measures, is an $SO(2)$ projection of the $SO(3,1)$. 
+However, the rotation of polarization any observer actually measures, is an $SO(2)$ projection of this $SO(3,1)$ rotation. 
 The null vector of the light ray and the timelike vector of the observer together determines which $SO(2)$ to project to.
  {\it Thus it is only natural that the actual rotation of polarization depends on the frame of the observer. }
 The $v$ in Eq.~(\ref{eq-v}) is supposed to be the relative velocity between the observer and the lens.
 Therefore, one cannot simply ask whether there are rotations in Schwarzschild metric without specifying who the observer is.
-For an observer at rest, there is indeed zero rotation.
-For a moving observer, there will be a nonzero rotation.
+For an observer at rest, there is indeed zero rotation; 
+for a moving observer, however, the rotation will be nonzero.
 
-In Sec.\ref{sec-born}, we will provide the operational definition of polarization rotation from the basic principles in general relativity and explain the inevitable observer-dependence.
+In Sec.\ref{sec-born}, we will provide an operational definition of polarization rotation from the basic principles in general relativity and explain the inevitable observer-dependence.
 In Sec.\ref{sec-Sch}, we will derive Eq.~(\ref{eq-v}) in the small rotation limit for one non-rotating point-mass lens, and show that it can be generalized into multiple lenses even with spins.
-In Sec.\ref{sec-prediction}, we will describe the observable effects on double pulsar and discuss the appropriate observation campaign to detect it.
+In Sec.\ref{sec-prediction}, we will describe the observable effects on double pulsar and discuss the appropriate observation campaign of future detection.
 
 \section{Definition from Scratch}
 \label{sec-born}
@@ -93,28 +96,25 @@ In Sec.\ref{sec-prediction}, we will describe the observable effects on double p
 \subsection{Operational Definition}
 
 Intuitively, one can imagine the polarization as a vector attached to a light ray that is spacelike and orthogonal to the direction of propagation. 
-Let {\bf k} be the null vector of the light ray and {\bf e} be a polarization vector, a parallel transport of {\bf e} should be valid in the geometric optic limit.
+Let {\bf k} be the null vector of the light ray and {\bf e} be a polarization vector, a parallel transport of {\bf e} should be valid in the geometric optic limit, i.e.
 \begin{equation}
 k^a \nabla_a e^c = k^a \partial_a e^c + k^a e^b \Gamma_{ab}^c =0~.
 \label{eq-para}
 \end{equation}
-When the rotation is small, using the Born approximation, integrating along a light ray from point A to point B leads to
+When the rotation is small, using the Born approximation, integrating along a light ray from point A to B then leads to a change of polarization vector
 \begin{equation}
 \Delta e^c = \int_A^B \hat{k}^a e_0^b \Gamma_{ab}^c~dl~,
 \label{eq-int}
 \end{equation}
 where ${\bf e_0}$ is the original vector and $\Delta${\bf e} is the change. 
-Naturally, $\Delta \phi \equiv |\Delta {\bf e}|/|{\bf e}|$ is the straightforward definition of how much a polarization vector has been rotated.
-
-This however, cannot be the full story. 
-Eq.~(\ref{eq-int}) literally compares two vectors on the tangent spaces of two different points, which is meaningless. 
+Straightforwardly, $\Delta \phi \equiv |\Delta {\bf e}|/|{\bf e}|$ could serve as a definition of how much a polarization vector has been rotated.
+This however, cannot be the full story since Eq.~(\ref{eq-int}) literally compares two vectors on the tangent spaces of two different points, which is meaningless. 
 The two vectors must be in the same tangent space to provide a physically meaningful rotation. 
-It turns out that Eq.~(\ref{eq-int}) does give the correct value, but some extra care is required to give it a clean definition.
+It turns out that Eq.~(\ref{eq-int}) does give the correct value, but some extra care will be required to give it a clean definition.
 
-First of all, parallel transport is not limited to null rays. 
-We can have an integral similar to Eq.~(\ref{eq-int}) along any path. 
-In particular, one can perform a loop integral, and the answer will be a meaningful comparison between two vectors on the same point. 
-Secondly, any such loop integral gives zero in Minkowski space, thus one can define that any segment in Minkowski space contributes exactly zero to the rotation. 
+First of all, parallel transport is not limited to null rays, and one can have an integral similar to Eq.~(\ref{eq-int}) along any path. 
+In particular, we should perform a loop integral, and the answer will then be a meaningful comparison between two vectors on the same point. 
+Secondly, any such loop integral gives zero in Minkowski space, thus one can define  {\color{red} (define?) } that any segment in Minkowski space contributes exactly zero to the rotation. 
 Now if we have a light ray starts from point A and reaches point B, both in asymptotic Minkowski space, one can validate Eq.~(\ref{eq-int}) by adding a term to it.
 \begin{equation}
 \Delta e^c = \int_A^B \hat{k}^a e_0^b \Gamma_{ab}^c~dl +
@@ -144,12 +144,13 @@ Thus the above loop integral is indeed calculating the rotation of polarization 
 \begin{figure}
 \includegraphics[width=0.6\textwidth]{loop.pdf}
 \caption{\label{fig:loop}
-Parallel transport along a loop contains 4 segments: bent light ray (solid), worldline of the pulsar (thick, green, left), worldline of the observer (thick, green, right), and an unbent light ray (dashed, bottom). It leads to an $SO(3,1)$ rotation of the tangent space. It contains the information of both deflection of light (from $k_\mu$ to $k'_\mu$) and the rotation of polarization, $\Delta\phi$. In practice, we can measure this effect by comparing the pulsar signal when the companion neutron star (blue dot) passes through the line-of-site (solid line) to the same signal in other times (dotted line).}
+Parallel transport along a loop contains 4 segments: bent light ray (solid black), worldline of the pulsar (thick, green, left), worldline of the observer (thick, green, right), and an unbent light ray (dashed, bottom). It leads to an $SO(3,1)$ rotation of the tangent space, and contains the information of both deflection of light (from $k_\mu$ to $k'_\mu$) and the rotation of polarization, $\Delta\phi$. In practice, we can measure this effect by comparing the pulsar signal when the companion neutron star (blue dot) passes through the line-of-site (solid line) to the same signal in other times (dotted line).
+{\color{red}(Xin: add A, B labels in the plots?) }  }
 \end{figure}
 
 \subsection{Observer Dependence}
 
-Eq.~(\ref{eq-int}) is the leading order effect of a small rotation matrix.
+Clearly, Eq.~(\ref{eq-int}) is the leading order effect of a small rotation matrix.
 \begin{equation}
 e^c = e_0^c + \Delta e^c = \Lambda^c_{\ b} e_0^b = 
 \left( g^c_{\ b} + \Delta^c_{\ b} \right) e_0^b~,
@@ -167,19 +168,17 @@ By definition of a rotation matrix, $\Delta_{cb}$ has to be anti-symmetric, whic
 &=& \frac{1}{2} \int k^b \left(\partial_a g_{bc} - \partial_c g_{ab}\right)d\lambda~.
 \end{eqnarray}
 Note that we have to drop the boundary term for this anti-symmetry, which is allowed because this is effectively a loop integral as we explained in the previous section.
-
-This tells us that there is actually a full $SO(3,1)$ rotation, $\Lambda^a_{\ b}\approx\left(g^a_{\ b} + \Delta^a_{\ b}\right)$, that is associated with a light ray which starts and ends in asymptotic Minkowski region. 
-This does not uniquely determine the polarization rotation, which is an $SO(2)$. 
-It also contains extra information such as the deflection of the light ray itself. 
-One needs to specify a two-dimensional plane of polarization to determine which $SO(2)$ to project to. 
+This demonstrates that there is actually a full $SO(3,1)$ rotation, $\Lambda^a_{\ b}\approx\left(g^a_{\ b} + \Delta^a_{\ b}\right)$, that is associated with a light ray starts and ends in asymptotic Minkowski region. 
+Most importantly, since the rotation of the polarization vector is an $SO(2)$, this rotation does not uniquely determine the change of the polarization angle and it also contains extra information such as the deflection of the light ray itself. 
+Particularly, one needs to specify a two-dimensional plane of polarization to determine which $SO(2)$ to project to. 
 For any observer, the polarization vectors are orthogonal to both the incoming light ray and its own worldline. 
 Thus a projection to the co-dimension-two surface orthogonal to the light ray and the observer 4-velocity is the desired $SO(2)$ rotation of polarization. 
-{\bf Therefore, it is natural and necessary that polarization rotation depends on the observer velocity}, which explains the $v$ dependence in Eq.~(\ref{eq-v}).
+{\it Therefore, it is natural and necessary that polarization rotation depends on the observer velocity}, which explains the $v$ dependence in Eq.~(\ref{eq-v}).
 
 One last possible confusion is why such dependence is on the velocity of the observer instead of the source, since they seem to play equivalent roles in the integral of Eq.~(\ref{eq-int}). 
-We remind the readers that the apparent line integral in Eq.~(\ref{eq-int}) is a convenient illusion. 
-The physically meaningful rotation is along a loop, where one sends out a polarization vector and waits for it to come back to see the difference. 
-Thus there is one unique point at which the rotation is defined. 
+Again, we remind the readers that the apparent line integral in Eq.~(\ref{eq-int}) is a convenient illusion, 
+and the physically meaningful rotation should be along a loop, where one sends out a polarization vector and waits for its  coming back to see the difference. 
+Thus there does exist one unique point at which the rotation is defined. 
 In practice, we will have no idea about the actual polarization when the signal is emitted at the pulsar. 
 All we know are the polarizations we received on earth, so that is the unique 4-velocity we care about.
 
@@ -209,13 +208,13 @@ Thus, one can see that even beyond Born approximation, the rotation of polarizat
 \subsection{Point Mass}
 
 We will treat the gravitational lens as a point mass and model it with a Schwarzschild metric in the isotropic form, expanded to the leading order of $(M/r)$. 
-The newton constant $G$ is conveniently set to 1.
 \begin{eqnarray}
 g_{ab}dx^adx^b &=& -\left(1-\frac{2M}{r}\right)dt^2 + \left(1+\frac{2M}{r}\right)\left(dx^2+dy^2+dz^2\right)~, \\
-r^2 &=& x^2 + y^2 + z^2~.
+r^2 &=& x^2 + y^2 + z^2~,
 \label{eq-SchIso}
 \end{eqnarray}
-Instead of studying an arbitrary light ray in the above coordinate, we will shift and boost the above metric such that the lens has arbitrary position and velocity, and the relevant light ray is aways $x=t$.
+where the Newton constant $G$ is conveniently set to $1$.
+Instead of studying an arbitrary light ray in the above coordinate, we will shift and boost this metric such that the lens has arbitrary position and velocity, and the relevant light ray is aways $x=t$.
 This means six parameters, $(x_0,y_0,z_0,v_x,v_y,v_z)$, which we will use symmetries to reduce down to three.
 
 First we use shift symmetries in $x$ and $t$ to set $x_0=0$. This simply means that we define $t=0$ to be the time when the light ray is closest to the lens.
