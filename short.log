@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  5 DEC 2016 12:11
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  6 DEC 2016 10:11
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -308,58 +308,80 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 38.
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) [1{/usr/local/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2]
+) [1{/usr/local/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+Overfull \hbox (4.57278pt too wide) in alignment at lines 132--139
+ [][][] []
+ []
 
-<loop.pdf, id=31, 603.25375pt x 573.14125pt>
+<loop.pdf, id=23, 603.25375pt x 573.14125pt>
 File: loop.pdf Graphic file (type pdf)
  <use loop.pdf>
 Package pdftex.def Info: loop.pdf used on input line 145.
-(pdftex.def)             Requested size: 306.00311pt x 290.72398pt.
- [3 <./loop.pdf>]
-[4] [5] [6]
+(pdftex.def)             Requested size: 229.49844pt x 218.0408pt.
+ [2 <./loop.pdf>]
+Overfull \hbox (8.09343pt too wide) in alignment at lines 163--168
+ [][][] []
+ []
+
+
+Overfull \hbox (39.36607pt too wide) in alignment at lines 210--213
+ [][][] []
+ []
+
+[3]
+Overfull \hbox (103.41112pt too wide) in alignment at lines 280--289
+ [][][] []
+ []
+
+[4]
 Package epstopdf Info: Source file: <rotang.eps>
-(epstopdf)                    date: 2016-10-31 16:13:29
-(epstopdf)                    size: 131666 bytes
+(epstopdf)                    date: 2016-12-06 09:53:51
+(epstopdf)                    size: 107501 bytes
 (epstopdf)             Output file: <rotang-eps-converted-to.pdf>
-(epstopdf)                    date: 2016-11-21 10:20:30
-(epstopdf)                    size: 128793 bytes
+(epstopdf)                    date: 2016-12-06 09:55:16
+(epstopdf)                    size: 101428 bytes
 (epstopdf)             Command: <repstopdf --outfile=rotang-eps-converted-to.pd
 f rotang.eps>
-(epstopdf)             \includegraphics on input line 376.
+(epstopdf)             \includegraphics on input line 327.
 Package epstopdf Info: Output file is already uptodate.
- <rotang-eps-converted-to.pdf, id=57, 1478.52374pt x 803.0pt>
+ <rotang-eps-converted-to.pdf, id=51, 815.045pt x 1246.6575pt>
 File: rotang-eps-converted-to.pdf Graphic file (type pdf)
 
 <use rotang-eps-converted-to.pdf>
-Package pdftex.def Info: rotang-eps-converted-to.pdf used on input line 376.
-(pdftex.def)             Requested size: 510.0pt x 276.98628pt.
- (./short.bbl [7 <./rotang-eps-converted-to.pdf>]
-Underfull \hbox (badness 2460) in paragraph at lines 28--43
-[]\OT1/cmr/m/n/9 M. Kramer, I. H. Stairs, R. N. Manch-ester, M. A. McLaugh-lin,
- A. G. Lyne, R. D. Fer-d-man, M. Bur-
+Package pdftex.def Info: rotang-eps-converted-to.pdf used on input line 327.
+(pdftex.def)             Requested size: 244.79782pt x 374.41862pt.
+ [5 <./rotang-eps-converted-to.pdf>]
+(./short.bbl
+Underfull \hbox (badness 6675) in paragraph at lines 28--43
+ \OT1/cmr/m/n/9 gay, D. R. Lorimer, A. Pos-senti, N. D'Amico,
+ []
+
+
+Underfull \hbox (badness 4353) in paragraph at lines 28--43
+ \OT1/cmr/m/n/9 et al., Sci-ence \OT1/cmr/bx/n/9 314\OT1/cmr/m/n/9 , 97 (2006),
+ ISSN 0036-8075,
+ []
+
+
+Overfull \hbox (11.48648pt too wide) in paragraph at lines 28--43
+ \OT1/cmr/m/n/9 http://science.sciencemag.org/content/314/5796/97.full.pdf,
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 28--43
-\OT1/cmr/m/n/9 gay, D. R. Lorimer, A. Pos-senti, N. D'Amico, et al., Sci-ence \
-OT1/cmr/bx/n/9 314\OT1/cmr/m/n/9 , 97 (2006), ISSN 0036-8075,
+ \OT1/cmr/m/n/9 URL $\OT1/cmtt/m/n/9 http : / / science . sciencemag . org / co
+ntent / 314 /
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 28--43
-\OT1/cmr/m/n/9 http://science.sciencemag.org/content/314/5796/97.full.pdf, URL 
-$\OT1/cmtt/m/n/9 http : / / science . sciencemag . org / content / 314 /
- []
-
-) [8] (./short.aux) ) 
+) [6] (./short.aux) ) 
 Here is how much of TeX's memory you used:
- 4325 strings out of 493014
- 56391 string characters out of 6133351
- 138550 words of memory out of 5000000
- 7790 multiletter control sequences out of 15000+600000
+ 4328 strings out of 493014
+ 56429 string characters out of 6133351
+ 144579 words of memory out of 5000000
+ 7793 multiletter control sequences out of 15000+600000
  13820 words of font info for 53 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 38i,8n,26p,881b,297s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 38i,10n,26p,881b,306s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2016/texmf-dist/fonts/type1/public/ams
 fonts/cm/cmbx10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsf
 onts/cm/cmbx12.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfo
@@ -386,10 +408,10 @@ ve/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive
 /texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/local/texlive/2016/t
 exmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb></usr/local/texlive/2016/tex
 mf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb>
-Output written on short.pdf (8 pages, 445575 bytes).
+Output written on short.pdf (6 pages, 417733 bytes).
 PDF statistics:
- 151 PDF objects out of 1000 (max. 8388607)
- 108 compressed objects within 2 object streams
+ 143 PDF objects out of 1000 (max. 8388607)
+ 102 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  11 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -1,4 +1,4 @@
-\documentclass[aps,showpacs,onecolumn,floats,prd,superscriptaddress,nofootinbib]{revtex4} 
+\documentclass[aps,showpacs,twocolumn,floats,prd,superscriptaddress,nofootinbib]{revtex4} 
 \usepackage{graphicx,amsmath,amssymb,amstext}
 \usepackage{amssymb,amsbsy,amsfonts,amsthm,color}
 
@@ -114,7 +114,7 @@ It turns out that Eq.~(\ref{eq-int}) does give the correct value, but some extra
 
 First of all, parallel transport is not limited to null rays, and one can have an integral similar to Eq.~(\ref{eq-int}) along any path. 
 In particular, we should perform a loop integral, and the answer will then be a meaningful comparison between two vectors on the same point. 
-Secondly, any such loop integral gives zero in Minkowski space, thus one can define  {\color{red} (define?) } that any segment in Minkowski space contributes exactly zero to the rotation. 
+Secondly, any such loop integral gives zero in Minkowski space, thus one can define  that any segment in Minkowski space contributes exactly zero to the rotation. 
 Now if we have a light ray starts from point A and reaches point B, both in asymptotic Minkowski space, one can validate Eq.~(\ref{eq-int}) by adding a term to it.
 \begin{equation}
 \Delta e^c = \int_A^B \hat{k}^a e_0^b \Gamma_{ab}^c~dl +
@@ -129,20 +129,20 @@ What we have is a source (pulsar) which constantly emits a fixed (albeit unknown
 We measure the polarization during a usual time, which is a light ray from $A_1$ to $B_1$. 
 And then we compare it with the polarization measured when its binary companion passes very close to the light of sight, which is another light ray from $A_2$ to $B_2$. 
 We take the difference between these two measurements, which is exactly a loop integral.
-\begin{equation}
-\Delta e^c = e^c|_{\rm at \ B_2} - e^c|_{\rm at \ B_1}
-= \int_{A_2}^{B_2} \hat{k}^a e_0^b \Gamma_{ab}^c~dl +
-\int_{B_2}^{B_1} \hat{p}^a e_0^b \Gamma_{ab}^c dl +
-\int_{B_1}^{A_1} \hat{k}^a e_0^b \Gamma_{ab}^c~dl +
+\begin{eqnarray}
+\Delta e^c &=& e^c|_{ B_2} - e^c|_{ B_1}
+= \int_{A_2}^{B_2} \hat{k}^a e_0^b \Gamma_{ab}^c~dl
+ + \int_{B_2}^{B_1} \hat{p}^a e_0^b \Gamma_{ab}^c dl  \nonumber \\ 
+&&+ \int_{B_1}^{A_1} \hat{k}^a e_0^b \Gamma_{ab}^c~dl +
 \int_{A_1}^{A_2} \hat{p}^a e_0^b \Gamma_{ab}^c dl~.
 \label{eq-pulsar}
-\end{equation}
+\end{eqnarray}
 The integral $B_1B_2$ and $A_1A_2$ are along timelike trajectories of the pulsar and the earth, which are effectively in the asymptotic region and nothing happens. 
 The integral $A_1B_1$ is along a light ray without the influence of the companion. 
 Thus the above loop integral is indeed calculating the rotation of polarization caused by the passage of the companion, as we can see in Fig.\ref{fig:loop}.
 
 \begin{figure}
-\includegraphics[width=0.6\textwidth]{loop.pdf}
+\includegraphics[width=0.45\textwidth]{loop.pdf}
 \caption{\label{fig:loop}
 Parallel transport along a loop contains 4 segments: bent light ray (solid black), worldline of the pulsar (thick, green, left), worldline of the observer (thick, green, right), and an unbent light ray (dashed, bottom). It leads to an $SO(3,1)$ rotation of the tangent space, and contains the information of both deflection of light (from $k_\mu$ to $k'_\mu$) and the rotation of polarization, $\Delta\phi$. In practice, we can measure this effect by comparing the pulsar signal when the companion neutron star (blue dot) passes through the line-of-site (solid line) to the same signal in other times (dotted line).
 {\color{red}(Xin: add A, B labels in the plots?) }  }
@@ -163,8 +163,7 @@ By definition of a rotation matrix, $\Delta_{cb}$ has to be anti-symmetric, whic
 \begin{eqnarray}
 \Delta_{ac} = \int k^b\Gamma_{ab}^d g_{cd}d\lambda &=& 
 \frac{1}{2} \int k^b \left(\partial_a g_{bc} + \partial_bg_{ac} - \partial_c g_{ab}\right)d\lambda
-\label{eq-Delta}
-\\ \nonumber
+\label{eq-Delta} \nonumber \\
 &=& \frac{1}{2} \int k^b \left(\partial_a g_{bc} - \partial_c g_{ab}\right)d\lambda~.
 \end{eqnarray}
 Note that we have to drop the boundary term for this anti-symmetry, which is allowed because this is effectively a loop integral as we explained in the previous section.
@@ -209,11 +208,10 @@ Thus, one can see that even beyond Born approximation, the rotation of polarizat
 
 We will treat the gravitational lens as a point mass and model it with a Schwarzschild metric in the isotropic form, expanded to the leading order of $(M/r)$. 
 \begin{eqnarray}
-g_{ab}dx^adx^b &=& -\left(1-\frac{2M}{r}\right)dt^2 + \left(1+\frac{2M}{r}\right)\left(dx^2+dy^2+dz^2\right)~, \\
-r^2 &=& x^2 + y^2 + z^2~,
+g_{ab}dx^adx^b &=& -\left(1-\frac{2M}{r}\right)dt^2 + \left(1+\frac{2M}{r}\right)  \left(dx^2+dy^2+dz^2\right), 
 \label{eq-SchIso}
 \end{eqnarray}
-where the Newton constant $G$ is conveniently set to $1$.
+where  $r^2 = x^2 + y^2 + z^2$,  and the Newton constant $G$ is conveniently set to $1$.
 Instead of studying an arbitrary light ray in the above coordinate, we will shift and boost this metric such that the lens has arbitrary position and velocity, and the relevant light ray is aways $x=t$.
 In principle, we need six parameters, i.e. $(x_0,y_0,z_0,v_x,v_y,v_z)$. However, 
 by applying symmetries, we could further simplify the problem so that eventually only three will be needed. 
@@ -223,18 +221,19 @@ Independent of what $x$-velocity the observer has, the plane orthogonal to both 
 Thus we are always calculating the rotation of polarization on the $y$-$z$ plane.
 Finally, using rotational symmetry on the $y$-$z$ plan, we can set $v_z=0$, leaving the remaining three parameters to be $v_y=v$, $y_0$ and $z_0$. The required coordinate transformation from Eq.~(\ref{eq-SchIso}) is given by
 \begin{eqnarray}
-\gamma = (1-v^2)^{-1/2}~, \ \ t \rightarrow \gamma(t-vy)~, \ \ y\rightarrow \gamma(y-vt-y_0)~, \ \
-z\rightarrow (z-z_0)~.
+\gamma = (1-v^2)^{-1/2}~, \ \ t \rightarrow \gamma(t-vy)~, \nonumber \\
+ y\rightarrow \gamma(y-vt-y_0)~, \ \ z\rightarrow (z-z_0)~.
 \end{eqnarray}
 The resulting metric becomes
 \begin{eqnarray}
-g_{ab}dx^adx^b &=& -\left[1-\gamma^2(1+v^2)\frac{2M}{r}\right]dt^2   
-+ \left[1+\gamma^2(1+v^2)\frac{2M}{r}\right]dy^2 
 \label{eq-metric}
-\\ \nonumber
-& & - \frac{8Mv\gamma^2}{r}dtdy + \left(1+\frac{2M}{r}\right)(dx^2+dz^2)~, \\
-r &=& \sqrt{ \gamma^2(y-vt-y_0)^2 + x^2 + (z-z_0)^2 }~.
+g_{ab}dx^adx^b &=& -\left[1-\gamma^2(1+v^2)\frac{2M}{r}\right]dt^2   
++ \biggl [1  + \nonumber \\
+&& \gamma^2(1+v^2)\frac{2M}{r} \biggr]dy^2 
+- \frac{8Mv\gamma^2}{r}dtdy  \nonumber \\
+&& + \left(1+\frac{2M}{r}\right)(dx^2+dz^2)~,
 \end{eqnarray}
+where $r = \sqrt{ \gamma^2(y-vt-y_0)^2 + x^2 + (z-z_0)^2 }$. 
 
 While calculating the connections,
 \begin{equation}
@@ -245,11 +244,11 @@ This applies to any $g^{ab}$ that is not hit by a derivative in the calculation,
 We also assume that both the null ray direction and the polarization direction are only changed by a small amount, i.e. the Born approximation. 
 Thus we can compute $\Delta_{ab}$ by Eq.~(\ref{eq-Delta}) along the undeflected light ray $x=t$.
 Many components of $g_{ab}$ are zero due to our choice of symmetries, so it is straightforward to see that
-\begin{equation}
-\Delta_{zy} = -\Delta_{yz} = \frac{1}{2}\int_{-\infty}^{\infty} dt \partial_z g_{ty}
-=-2Mv\gamma^2 z_0 \int_{-\infty}^{\infty}
-\frac{dt}{\left[\gamma^2(vt+y_0)^2+t^2 + z_0^2\right]^{3/2}}~.
-\end{equation}
+\begin{eqnarray}
+\Delta_{zy} &=& -\Delta_{yz} = \frac{1}{2}\int_{-\infty}^{\infty} dt \partial_z g_{ty} \nonumber \\
+&=&-2Mv\gamma^2 z_0 \int_{-\infty}^{\infty}
+\frac{dt}{\left[\gamma^2(vt+y_0)^2+t^2 + z_0^2\right]^{3/2}}. ~~~~
+\end{eqnarray}
 
 For $v\ll1$, we can perform the integral and keep only the leading order value to get 
 \begin{equation}
@@ -280,12 +279,13 @@ That is because Eq.~(\ref{eq-metric}) allows superposition when all lenses are n
 At the leading order (ignoring sub-leading velocity terms), the metric of multiple moving point masses are given by
 \begin{eqnarray}
 g_{ab}dx^adx^b &=& -\left( 1 - 2\sum_n \frac{m^{(n)}}{r^{(n)}} \right)dt^2
-+\left( 1 + 2\sum_n \frac{m^{(n)}}{r^{(n)}} \right)(dx^2+dy^2+dz^2)
-\\ \nonumber 
-& & -8\sum_i \frac{m^{(n)} }{r^{(n)}}
-\left(v^{(n)}_x dx + v^{(n)}_y dy+ v^{(n)}_z dz\right)~, \\
++\left( 1 + 2\sum_n \frac{m^{(n)}}{r^{(n)}} \right) \nonumber \\
+&& \times (dx^2+dy^2+dz^2) 
+ -8\sum_i \frac{m^{(n)} }{r^{(n)}}
+\biggl(v^{(n)}_x dx   \nonumber\\
+&& + v^{(n)}_y dy+ v^{(n)}_z dz\biggr)~, \nonumber\\
 r^{(n)} &=& \sqrt{\left(x - x_0^{(n)} - v^{(n)}_x t\right)^2 + \left(y - y_0^{(n)} - v^{(n)}_y t\right)^2 
-+ \left(z - z_0^{(n)} - v^{(n)}_z t\right)^2}~.
++ \left(z - z_0^{(n)} - v^{(n)}_z t\right)^2}
 \end{eqnarray}
 
 Their contributions to the total rotation also superimpose linearly. 
@@ -301,8 +301,8 @@ Under these assumptions, Eq.~(\ref{eq-combine}) provides the general answer to a
 By the uniqueness theorem, the effect from a Kerr metric of mass $M$ and spin $S$ can be mimicked by a two-particle system at the leading order.
 \begin{eqnarray}
 v_z^{(1)} &=& v_z^{(2)} = 0~,  \ \ \ v_y^{(1)} = v -\delta v~, \ \ \ v_y^{(2)} = v + \delta v~, \nonumber \\
-y_0^{(1)} &=& y_0^{(2)} = y_0~, \ \ \ z_0^{(1)} = z_0-d~, \ \ \ z_0^{(2)} = z_0 + d~, \\
-m^{(1)} &=& m^{(2)} = M/2~, \ \ \ S = M (\delta v) d~. \nonumber
+y_0^{(1)} &=& y_0^{(2)} = y_0~, \ \ \ z_0^{(1)} = z_0-d~, \ \ \ z_0^{(2)} = z_0 + d~, \nonumber \\
+m^{(1)} &=& m^{(2)} = M/2~, \ \ \ S = M (\delta v) d~. 
 \end{eqnarray}
 Taking $d\rightarrow0$ while holding $S$ fixed, we get
 \begin{eqnarray}
@@ -321,6 +321,22 @@ The spin of the point mass contributes in exactly the same way as its ``orbital'
 
 \section{Example: Double Pulsar}
 \label{sec-prediction}
+
+
+\begin{figure}
+\includegraphics[width=0.48\textwidth]{rotang.eps}
+\caption{\label{fig:rotang}
+The angle of polarization rotation for binary pulsar PSR J0737-3039, the signals are shifted to peak at either $\pi/2$ 
+or  $3\pi/2$ for aesthetic purpose. {\it Top-left:} rotation angle $\Delta \phi$ due to orbital angular momentum. 
+The difference between $A$ and $B$ are purely due to the mass of the lens. {\it Top-right:} the rotation angle due 
+to the spin, which are estimated by assuming uniform density profile with $30 km$ radius.  Notice the different 
+y-scale, where $A$ peak at $3\times 10^{-13}$, while $B$ peaks around $2.7\times 10^{-11}$. 
+{\it Bottom-left:} Highlighting of the region which is blocked by eclipse. 
+{\it Bottom-right:}  The inclination dependence of the peak signal for $A$-pulsar, the dashed line indicates its
+real inclination angle.
+ }
+\end{figure}
+
 
 \subsection{Estimation}
 
@@ -371,20 +387,6 @@ It is well-known that at this moment, there will also be an eclipse, so one may 
 We specifically zoomed in and blacked-out the eclipsed.
 We found that the peak of the $\Delta\phi$ curve is significantly wider than the eclipse duration.
 Thus for a (relatively) long duration before and after the eclipse, we can still observe $\Delta\phi\sim10^{-7}rad$.
-
-\begin{figure}
-\includegraphics[width=\textwidth]{rotang.eps}
-\caption{\label{fig:rotang}
-The angle of polarization rotation for binary pulsar PSR J0737-3039, the signals are shifted to peak at either $\pi/2$ 
-or  $3\pi/2$ for aesthetic purpose. {\it Top-left:} rotation angle $\Delta \phi$ due to orbital angular momentum. 
-The difference between $A$ and $B$ are purely due to the mass of the lens. {\it Top-right:} the rotation angle due 
-to the spin, which are estimated by assuming uniform density profile with $30 km$ radius.  Notice the different 
-y-scale, where $A$ peak at $3\times 10^{-13}$, while $B$ peaks around $2.7\times 10^{-11}$. 
-{\it Bottom-left:} Highlighting of the region which is blocked by eclipse. 
-{\it Bottom-right:}  The inclination dependence of the peak signal for $A$-pulsar, the dashed line indicates its
-real inclination angle.
- }
-\end{figure}
 
 %\section{Known Disagreement/Confusions}
 
