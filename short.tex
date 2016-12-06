@@ -45,7 +45,7 @@ Despite its tiny signal, this is $10$ orders of magnitude larger than the previo
 
 Einstein's theory of General Relativity has been the dominant theory of gravity for a century. 
 Many of its signature outcomes, such as light-bending, orbital precession, and gravitational waves, have been confirmed by precision tests in astronomy \cite{DysEdd20,KraSta97,WeiTay04,Abb16}. 
-One of last pending tests is the gravitational rotation of the polarization angle. 
+One of the last pending tests is the gravitational rotation of the polarization angle. 
 Since gravity directly affects the spacetime geometry, a gravitational lens not only can bend the light ray, it may also rotate the polarization.
 Such gravitational rotation of polarization has not been measured so far.
 \footnote{The E-mode and B-mode in CMB are defined as the relative angle between polarization and gradient. 
@@ -71,23 +71,27 @@ They however derived a much smaller number which is incorrect.
 In fact, various theoretical derivations of this rotation of polarization have probably bring more confusion  %developed into a state of chaos 
 than clarity since its first appearance in \cite{Skr57}.
 {\color{blue} It was summarized in \cite{BroDem11} that three different values of $\Delta\phi$ can be derived from existing literature for seemingly identical physical situations.
-Many authors disagreed on ``whether there is a nonzero rotation in Schwarzschild metric'', while none of them correctly pointed out that it is not even a well-defined question to ask, as we will show in this paper.
+Many authors disagreed on ``whether there is a nonzero rotation in Schwarzschild metric'', while none of them correctly pointed out that it is not even a well-defined question to ask.
 Although Eq.~(\ref{eq-v}) has been derived by some authors, such as in \cite{KopMas01}, they did not explicitly explain why it is the correct result. }
-{\color{red} (Xin) be careful, also mention papers that got this right, e.g. Dai (2004) }
+{\color{red} (Xin) be careful, also mention papers that got this right, e.g. Dai (2004). }
 
 In this paper, we will resolve the confusions by deriving Eq.~(\ref{eq-v}) from the very basic concept of general relativity---parallel transports. 
-The root of doubts to Eq.~(\ref{eq-v}) all come from its apparent gauge-dependence, since the velocity $v$ depends on which frame we choose. 
-It turns out that there is a gauge-invariant $SO(3,1)$ gravitational rotation of the tangent space along any light ray that starts and ends in asymptotic Minkowski space. 
-However, the rotation of polarization any observer actually measures, is an $SO(2)$ projection of this $SO(3,1)$ rotation. 
-The null vector of the light ray and the timelike vector of the observer together determines which $SO(2)$ to project to.
- {\it Thus it is only natural that the actual rotation of polarization depends on the frame of the observer. }
-The $v$ in Eq.~(\ref{eq-v}) is supposed to be the relative velocity between the observer and the lens.
-Therefore, one cannot simply ask whether there are rotations in Schwarzschild metric without specifying who the observer is.
+It turns out that $\Delta\phi$, despite being a number, is not a gauge-invariant scalar.
+It is actually an $SO(2)$ projection of a covariant $SO(3,1)$ tensor.
+Therefore it is natural for $\Delta\phi$ to be gauge-dependent.
+ {\it More precisely, the rotation of polarization depends on the frame of the observer. }
+Such observer/gauge-dependence was the source of confusions.
+For example, one cannot simply ask whether there are rotations in Schwarzschild metric without specifying who the observer is.
 For an observer at rest, there is indeed zero rotation; 
 for a moving observer, however, the rotation will be nonzero.
 
+We also identify the ``correct'' gauge to compute such rotation, in which the answer will agree with the actually observation of double-pulsar signal from the earth.
+It involves comparing the polarization of two signals, and both are measured in the rest frame of the earth.
+Thus it is only natural that we calculate in the earth frame.
+The $v$ in Eq.~(\ref{eq-v}) is the relative velocity between the observer and the lens.
+
 In Sec.\ref{sec-born}, we will provide an operational definition of polarization rotation from the basic principles in general relativity and explain the inevitable observer-dependence.
-In Sec.\ref{sec-Sch}, we will derive Eq.~(\ref{eq-v}) in the small rotation limit for one non-rotating point-mass lens, and show that it can be generalized into multiple lenses even with spins.
+In Sec.\ref{sec-Sch}, we will derive Eq.~(\ref{eq-v}) in the small rotation limit for one spin-less point-mass lens, and show that it can be generalized into multiple lenses even with spins.
 In Sec.\ref{sec-prediction}, we will describe the observable effects on double pulsar and discuss the appropriate observation campaign of future detection.
 
 \section{Definition from Scratch}
@@ -145,7 +149,7 @@ Thus the above loop integral is indeed calculating the rotation of polarization 
 \includegraphics[width=0.45\textwidth]{loop.pdf}
 \caption{\label{fig:loop}
 Parallel transport along a loop contains 4 segments: bent light ray (solid black), worldline of the pulsar (thick, green, left), worldline of the observer (thick, green, right), and an unbent light ray (dashed, bottom). It leads to an $SO(3,1)$ rotation of the tangent space, and contains the information of both deflection of light (from $k_\mu$ to $k'_\mu$) and the rotation of polarization, $\Delta\phi$. In practice, we can measure this effect by comparing the pulsar signal when the companion neutron star (blue dot) passes through the line-of-site (solid line) to the same signal in other times (dotted line).
-{\color{red}(Xin: add A, B labels in the plots?) }  }
+}
 \end{figure}
 
 \subsection{Observer Dependence}
@@ -166,18 +170,19 @@ By definition of a rotation matrix, $\Delta_{cb}$ has to be anti-symmetric, whic
 \label{eq-Delta} \nonumber \\
 &=& \frac{1}{2} \int k^b \left(\partial_a g_{bc} - \partial_c g_{ab}\right)d\lambda~.
 \end{eqnarray}
-Note that we have to drop the boundary term for this anti-symmetry, which is allowed because this is effectively a loop integral as we explained in the previous section.
+Note that we have to drop the boundary term in the above integral, which is allowed because this is effectively a loop integral as we explained in the previous section.
 This demonstrates that there is actually a full $SO(3,1)$ rotation, $\Lambda^a_{\ b}\approx\left(g^a_{\ b} + \Delta^a_{\ b}\right)$, that is associated with a light ray starts and ends in asymptotic Minkowski region. 
-Most importantly, since the rotation of the polarization vector is an $SO(2)$, this rotation does not uniquely determine the change of the polarization angle and it also contains extra information such as the deflection of the light ray itself. 
+Most importantly, since the rotation of the polarization vector is an $SO(2)$, the above $SO(3,1)$ rotation does not uniquely determine the change of the polarization angle.
+It also contains extra information such as the deflection of the light ray itself. 
 Particularly, one needs to specify a two-dimensional plane of polarization to determine which $SO(2)$ to project to. 
 For any observer, the polarization vectors are orthogonal to both the incoming light ray and its own worldline. 
 Thus a projection to the co-dimension-two surface orthogonal to the light ray and the observer 4-velocity is the desired $SO(2)$ rotation of polarization. 
 {\it Therefore, it is natural and necessary that polarization rotation depends on the observer velocity}, which explains the $v$ dependence in Eq.~(\ref{eq-v}).
 
 One last possible confusion is why such dependence is on the velocity of the observer instead of the source, since they seem to play equivalent roles in the integral of Eq.~(\ref{eq-int}). 
-Again, we remind the readers that the apparent line integral in Eq.~(\ref{eq-int}) is a convenient illusion, 
-and the physically meaningful rotation should be along a loop, where one sends out a polarization vector and waits for its  coming back to see the difference. 
-Thus there does exist one unique point at which the rotation is defined. 
+Again, we remind the readers that the apparent line integral in Eq.~(\ref{eq-int}) is a convenient illusion.
+The physically meaningful rotation should be along a loop, where one sends out a polarization vector and waits for its  coming back to see the difference. 
+Thus there does exist one unique point at which the rotation is defined, which is where the two polarizations are being compared. 
 In practice, we will have no idea about the actual polarization when the signal is emitted at the pulsar. 
 All we know are the polarizations we received on earth, so that is the unique 4-velocity we care about.
 
@@ -208,7 +213,8 @@ Thus, one can see that even beyond Born approximation, the rotation of polarizat
 
 We will treat the gravitational lens as a point mass and model it with a Schwarzschild metric in the isotropic form, expanded to the leading order of $(M/r)$. 
 \begin{eqnarray}
-g_{ab}dx^adx^b &=& -\left(1-\frac{2M}{r}\right)dt^2 + \left(1+\frac{2M}{r}\right)  \left(dx^2+dy^2+dz^2\right), 
+g_{ab}dx^adx^b &=& -\left(1-\frac{2M}{r}\right)dt^2 \\ \nonumber
+&+& \left(1+\frac{2M}{r}\right)  \left(dx^2+dy^2+dz^2\right), 
 \label{eq-SchIso}
 \end{eqnarray}
 where  $r^2 = x^2 + y^2 + z^2$,  and the Newton constant $G$ is conveniently set to $1$.
@@ -228,10 +234,10 @@ The resulting metric becomes
 \begin{eqnarray}
 \label{eq-metric}
 g_{ab}dx^adx^b &=& -\left[1-\gamma^2(1+v^2)\frac{2M}{r}\right]dt^2   
-+ \biggl [1  + \nonumber \\
-&& \gamma^2(1+v^2)\frac{2M}{r} \biggr]dy^2 
+\nonumber \\
+&+& \biggl [1  +  \gamma^2(1+v^2)\frac{2M}{r} \biggr]dy^2 
 - \frac{8Mv\gamma^2}{r}dtdy  \nonumber \\
-&& + \left(1+\frac{2M}{r}\right)(dx^2+dz^2)~,
+&+& \left(1+\frac{2M}{r}\right)(dx^2+dz^2)~,
 \end{eqnarray}
 where $r = \sqrt{ \gamma^2(y-vt-y_0)^2 + x^2 + (z-z_0)^2 }$. 
 
@@ -279,13 +285,15 @@ That is because Eq.~(\ref{eq-metric}) allows superposition when all lenses are n
 At the leading order (ignoring sub-leading velocity terms), the metric of multiple moving point masses are given by
 \begin{eqnarray}
 g_{ab}dx^adx^b &=& -\left( 1 - 2\sum_n \frac{m^{(n)}}{r^{(n)}} \right)dt^2
-+\left( 1 + 2\sum_n \frac{m^{(n)}}{r^{(n)}} \right) \nonumber \\
-&& \times (dx^2+dy^2+dz^2) 
- -8\sum_i \frac{m^{(n)} }{r^{(n)}}
-\biggl(v^{(n)}_x dx   \nonumber\\
-&& + v^{(n)}_y dy+ v^{(n)}_z dz\biggr)~, \nonumber\\
-r^{(n)} &=& \sqrt{\left(x - x_0^{(n)} - v^{(n)}_x t\right)^2 + \left(y - y_0^{(n)} - v^{(n)}_y t\right)^2 
-+ \left(z - z_0^{(n)} - v^{(n)}_z t\right)^2}
+ \\ \nonumber
+&+& \left( 1 + 2\sum_n \frac{m^{(n)}}{r^{(n)}} \right) (dx^2+dy^2+dz^2) 
+\\ \nonumber
+&-& 8\sum_i \frac{m^{(n)} }{r^{(n)}}
+\biggl(v^{(n)}_x dx  + v^{(n)}_y dy+ v^{(n)}_z dz\biggr)~, \\
+r^{(n)} &=& \bigg[\left(x - x_0^{(n)} - v^{(n)}_x t\right)^2 
+\\ \nonumber
+& & + \left(y - y_0^{(n)} - v^{(n)}_y t\right)^2 
++ \left(z - z_0^{(n)} - v^{(n)}_z t\right) \bigg]^{1/2}
 \end{eqnarray}
 
 Their contributions to the total rotation also superimpose linearly. 
@@ -337,9 +345,6 @@ real inclination angle.
  }
 \end{figure}
 
-
-\subsection{Estimation}
-
 Before putting in the actual numbers, let us first give a rough estimation on the maximal rotation we can get from the double pulsar system.
 Recall that the Schwarzschild radius of the sun is roughly $3km$, and these neutron stars are slightly larger.
 A typical neutron star is slightly smaller than 10 times its own Schwarzschild radius, so we take the radius of the lens neutron star to be $30km$.
@@ -365,22 +370,10 @@ In our case, that means the spin is almost perpendicular to the line-of-sight, s
 We can estimate the maximal rotation from the orbital contribution only, which is about\begin{equation}
 \Delta\phi \approx 4 \frac{10^7 m^2}{\left[  10^9m\times  2\pi / 180 \right]^2}\approx 3*10^{-8}~.
 \end{equation}
-The actual value is slightly larger, as we will show in the next session.
-
+The actual value is slightly larger.
 %{\bf XXX: Xin, please see if you need to improve my number to be closer to the actual values.}
-
-
-
-
-\subsection{Prediction}
 In Fig.~(\ref{fig:rotang}), we calculated the signal $\Delta \phi$ using the orbital information of double pulsar system PSR J0737-3039 \cite{KraSta97}. 
-
-
-
-
-
-We ignore the spin contribution since they are negligible as we explained in the previous section. 
-The results are given in Fig.\ref{fig:rotang}. 
+We ignore the spin contribution since they are negligible as we explained. 
 We can see that during a rotation period, we can expect a maximal rotation of polarization ($\Delta\phi$) at about $10^{-7} rad$. 
 This happens when the companion (lens) is almost in front of the pulsar.
 It is well-known that at this moment, there will also be an eclipse, so one may worry that we cannot actually see this maximal rotation.
