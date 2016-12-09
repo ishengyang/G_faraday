@@ -49,7 +49,8 @@ One of the last pending tests is the gravitational rotation of the polarization 
 Since gravity directly affects the spacetime geometry, a gravitational lens not only can bend the light ray, it may also rotate the polarization.
 Such gravitational rotation of polarization has not been measured so far.
 \footnote{The E-mode and B-mode in CMB are defined as the relative angle between polarization and gradient. 
-The observed rotation is a consequence of a rotated gradient but a fixed polarization, thus it does not count.} 
+The observed leading order effect is a consequence of a rotated gradient but a fixed polarization, thus it does not count.
+The actual rotation of polarization contributes to sub-leading effects, which are analyzed in \cite{Dai14}, and it is unclear whether we will eventually observe them.} 
 One obvious reason is that it is usually very small. 
 The rotation angle of a linearly polarized light ray, caused by a gravitational lens, is suppressed by two small numbers.
 \begin{equation}
@@ -72,8 +73,7 @@ In fact, various theoretical derivations of this rotation of polarization have p
 than clarity since its first appearance in \cite{Skr57}.
 {\color{blue} It was summarized in \cite{BroDem11} that three different values of $\Delta\phi$ can be derived from existing literature for seemingly identical physical situations.
 Many authors disagreed on ``whether there is a nonzero rotation in Schwarzschild metric'', while none of them correctly pointed out that it is not even a well-defined question to ask.
-Although Eq.~(\ref{eq-v}) has been derived by some authors, such as in \cite{KopMas01}, they did not explicitly explain why it is the correct result. }
-{\color{red} (Xin) be careful, also mention papers that got this right, e.g. Dai (2004). }
+Although Eq.~(\ref{eq-v}) has been derived by some authors, such as in \cite{KopMas01, Dai14}, they did not explicitly explain why it is the correct result. }
 
 In this paper, we will resolve the confusions by deriving Eq.~(\ref{eq-v}) from the very basic concept of general relativity---parallel transports. 
 It turns out that $\Delta\phi$, despite being a number, is not a gauge-invariant scalar.
@@ -85,9 +85,9 @@ For example, one cannot simply ask whether there are rotations in Schwarzschild 
 For an observer at rest, there is indeed zero rotation; 
 for a moving observer, however, the rotation will be nonzero.
 
-We also identify the ``correct'' gauge to compute such rotation, in which the answer will agree with the actually observation of double-pulsar signal from the earth.
+We also identify the ``correct'' gauge to compute such rotation, in which the answer will agree with the actual observation of double-pulsar signal from the earth.
 It involves comparing the polarization of two signals, and both are measured in the rest frame of the earth.
-Thus it is only natural that we calculate in the earth frame.
+Thus it is only natural that we calculate in the earth (observer's) frame.
 The $v$ in Eq.~(\ref{eq-v}) is the relative velocity between the observer and the lens.
 
 In Sec.\ref{sec-born}, we will provide an operational definition of polarization rotation from the basic principles in general relativity and explain the inevitable observer-dependence.
@@ -203,7 +203,7 @@ First of all, the observer's 4-velocity reduces $SO(3,1)$ down to $SO(3)$.
 The light rays, before and after the deflection, $k$ and $k'$, are also reduced down to two spacelike vectors in the observer's frame, $\kappa$ and $\kappa'$.
 As long as $\kappa\neq-\kappa'$, there is a unique, minimal $SO(3)$ rotation that aligns them.
 \footnote{Note that there are many rotations which can align them, but there is a unique minimal rotation, that is rotating along the direction orthogonal to both of them, $(\kappa\times\kappa')$.}
-Aligning $\kappa$ and $\kappa'$ also put their polarization vectors into the same plane, in which an $SO(2)$ rotation is uniquely defined. 
+Aligning $\kappa$ and $\kappa'$ also merges their polarization planes, in which an $SO(2)$ rotation is uniquely defined. 
 Thus, one can see that even beyond Born approximation, the rotation of polarization is still a well-defined, unambiguous, observer-dependent $SO(2)$ projection of a gauge-invariant $SO(3,1)$.
 
 \section{Explicit calculation}

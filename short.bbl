@@ -12,6 +12,13 @@
 \providecommand{\bibinfo}[2]{#2}
 \providecommand{\eprint}[2][]{\url{#2}}
 
+\bibitem[{\citenamefont{Ruggiero and Tartaglia}(2007)}]{RugTar06}
+\bibinfo{author}{\bibfnamefont{M.~L.} \bibnamefont{Ruggiero}} \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{A.}~\bibnamefont{Tartaglia}},
+  \bibinfo{journal}{Mon. Not. Roy. Astron. Soc.}
+  \textbf{\bibinfo{volume}{374}}, \bibinfo{pages}{847} (\bibinfo{year}{2007}),
+  \eprint{astro-ph/0609712}.
+
 \bibitem[{\citenamefont{{Dyson} et~al.}(1920)\citenamefont{{Dyson},
   {Eddington}, and {Davidson}}}]{DysEdd20}
 \bibinfo{author}{\bibfnamefont{F.~W.} \bibnamefont{{Dyson}}},
@@ -53,12 +60,10 @@
   \bibinfo{journal}{Phys. Rev. Lett.} \textbf{\bibinfo{volume}{116}},
   \bibinfo{pages}{061102} (\bibinfo{year}{2016}), \eprint{1602.03837}.
 
-\bibitem[{\citenamefont{Ruggiero and Tartaglia}(2007)}]{RugTar06}
-\bibinfo{author}{\bibfnamefont{M.~L.} \bibnamefont{Ruggiero}} \bibnamefont{and}
-  \bibinfo{author}{\bibfnamefont{A.}~\bibnamefont{Tartaglia}},
-  \bibinfo{journal}{Mon. Not. Roy. Astron. Soc.}
-  \textbf{\bibinfo{volume}{374}}, \bibinfo{pages}{847} (\bibinfo{year}{2007}),
-  \eprint{astro-ph/0609712}.
+\bibitem[{\citenamefont{Dai}(2014)}]{Dai14}
+\bibinfo{author}{\bibfnamefont{L.}~\bibnamefont{Dai}}, \bibinfo{journal}{Phys.
+  Rev. Lett.} \textbf{\bibinfo{volume}{112}}, \bibinfo{pages}{041303}
+  (\bibinfo{year}{2014}), \eprint{1311.3662}.
 
 \bibitem[{\citenamefont{{Skrotskii}}(1957)}]{Skr57}
 \bibinfo{author}{\bibfnamefont{G.~V.} \bibnamefont{{Skrotskii}}},
@@ -78,11 +83,5 @@
   \bibinfo{author}{\bibfnamefont{B.}~\bibnamefont{Mashhoon}},
   \bibinfo{journal}{Phys. Rev.} \textbf{\bibinfo{volume}{D65}},
   \bibinfo{pages}{064025} (\bibinfo{year}{2002}), \eprint{gr-qc/0110101}.
-
-\bibitem[{\citenamefont{Sereno}(2005)}]{Ser04}
-\bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{Sereno}},
-  \bibinfo{journal}{Mon. Not. Roy. Astron. Soc.}
-  \textbf{\bibinfo{volume}{356}}, \bibinfo{pages}{381} (\bibinfo{year}{2005}),
-  \eprint{astro-ph/0410015}.
 
 \end{thebibliography}
