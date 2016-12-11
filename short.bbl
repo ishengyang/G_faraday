@@ -1,4 +1,4 @@
-\begin{thebibliography}{9}
+\begin{thebibliography}{10}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \expandafter\ifx\csname bibnamefont\endcsname\relax
   \def\bibnamefont#1{#1}\fi
@@ -83,5 +83,18 @@
   \bibinfo{author}{\bibfnamefont{B.}~\bibnamefont{Mashhoon}},
   \bibinfo{journal}{Phys. Rev.} \textbf{\bibinfo{volume}{D65}},
   \bibinfo{pages}{064025} (\bibinfo{year}{2002}), \eprint{gr-qc/0110101}.
+
+\bibitem[{\citenamefont{{Demorest} et~al.}(2004)\citenamefont{{Demorest},
+  {Ramachandran}, {Backer}, {Ransom}, {Kaspi}, {Arons}, and
+  {Spitkovsky}}}]{2004ApJ...615L.137D}
+\bibinfo{author}{\bibfnamefont{P.}~\bibnamefont{{Demorest}}},
+  \bibinfo{author}{\bibfnamefont{R.}~\bibnamefont{{Ramachandran}}},
+  \bibinfo{author}{\bibfnamefont{D.~C.} \bibnamefont{{Backer}}},
+  \bibinfo{author}{\bibfnamefont{S.~M.} \bibnamefont{{Ransom}}},
+  \bibinfo{author}{\bibfnamefont{V.}~\bibnamefont{{Kaspi}}},
+  \bibinfo{author}{\bibfnamefont{J.}~\bibnamefont{{Arons}}}, \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{A.}~\bibnamefont{{Spitkovsky}}},
+  \bibinfo{journal}{\apjl} \textbf{\bibinfo{volume}{615}},
+  \bibinfo{pages}{L137} (\bibinfo{year}{2004}), \eprint{astro-ph/0402025}.
 
 \end{thebibliography}
