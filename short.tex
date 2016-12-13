@@ -1,4 +1,4 @@
-\documentclass[aps,showpacs,twocolumn,floats,prd,superscriptaddress,nofootinbib]{revtex4} 
+\documentclass[aps,showpacs,twocolumn,floats,prd,superscriptaddress,nofootinbib]{revtex4-1} 
 \usepackage{graphicx,amsmath,amssymb,amstext}
 \usepackage{amssymb,amsbsy,amsfonts,amsthm,color}
 
@@ -31,11 +31,9 @@ Clarifying the gauge dependence and prediction for double pulsar}
 \affiliation{Perimeter Institute of Theoretical Physics, 31 Caroline Street North, Waterloo, ON N2L 2Y5, Canada.}
 
 \begin{abstract}
-From the basic concept of general relativity, we investigate the rotation of the polarization angle by a moving 
-gravitational lens. 
+From the basic concepts of general relativity, we investigate the rotation of the polarization angle by a moving gravitational lens. 
 Particularly, we clarify the existing confusion in the literature by showing and explaining why such rotation must explicitly depend on the relative motion between the observer and the lens. 
-We update the prediction of such effect on the double pulsar PSR J0737-3039 and estimate a rotation angle 
-of $\sim 10^{-7}rad$. 
+We update the prediction of such effect on the double pulsar PSR J0737-3039 and estimate a rotation angle of $\sim 10^{-7}rad$. 
 Despite its tiny signal, this is $10$ orders of magnitude larger than the previous prediction by Ruggiero and Tartaglia \cite{RugTar06}, which apparently was misguided by the confusion in the literature. 
 \end{abstract}
 
@@ -62,18 +60,18 @@ Unless the light goes through somewhere comparable to the Schwarzschild radius, 
 Unless the velocity is almost relativistic, the second factor is small. 
 
 Luckily, an almost edge-on, compact pulsar binary system, such as the double pulsar PSR J0737-3039, can be a very strong candidate to measure such effect. 
-Pulsar signals are often highly polarized, allowing precise measurements of its rotation; 
-an almost edge-on orbit allows the impact parameter to be very small at the superior conjunction; 
-its compact orbit means a large velocity. 
+Pulsar signals are often highly polarized, allowing precise measurements of its rotation.
+This system has an almost edge-on orbit which allows the impact parameter to be very small at the superior conjunction.
+Finally, its compact orbit, with a two-hour period, means a large velocity. 
 One main point of this paper is to show that one can expect to have $\Delta\phi\sim 10^{-7}$ from double pulsar, which might be observable given a dedicated observation campaign.
 
-The gravitational rotation of polarization from this double pulsar system was previously studied by \cite{RugTar06}. 
+The gravitational rotation of polarization from this double pulsar system was previously studied in \cite{RugTar06}. 
 They however derived a much smaller number which is incorrect. 
-In fact, various theoretical derivations of this rotation of polarization have probably bring more confusion  %developed into a state of chaos 
+In fact, various theoretical derivations of this rotation of polarization have probably brought more confusion  %developed into a state of chaos 
 than clarity since its first appearance in \cite{Skr57}.
-{\color{blue} It was summarized in \cite{BroDem11} that three different values of $\Delta\phi$ can be derived from existing literature for seemingly identical physical situations.
+It was summarized in \cite{BroDem11} that three different values of $\Delta\phi$ can be derived from existing literature for seemingly identical physical situations.
 Many authors disagreed on ``whether there is a nonzero rotation in Schwarzschild metric'', while none of them correctly pointed out that it is not even a well-defined question to ask.
-Although Eq.~(\ref{eq-v}) has been derived by some authors, such as in \cite{KopMas01, Dai14}, they did not explicitly explain why it is the correct result. }
+Although Eq.~(\ref{eq-v}) has been derived by some authors, such as in \cite{KopMas01, Dai14}, they did not explicitly explain why it is the correct result.
 
 In this paper, we will resolve the confusions by deriving Eq.~(\ref{eq-v}) from the very basic concept of general relativity---parallel transports. 
 It turns out that $\Delta\phi$, despite being a number, is not a gauge-invariant scalar.
@@ -91,8 +89,10 @@ Thus it is only natural that we calculate in the earth (observer's) frame.
 The $v$ in Eq.~(\ref{eq-v}) is the relative velocity between the observer and the lens.
 
 In Sec.\ref{sec-born}, we will provide an operational definition of polarization rotation from the basic principles in general relativity and explain the inevitable observer-dependence.
-In Sec.\ref{sec-Sch}, we will derive Eq.~(\ref{eq-v}) in the small rotation limit for one spin-less point-mass lens, and show that it can be generalized into multiple lenses even with spins.
-In Sec.\ref{sec-prediction}, we will describe the observable effects on double pulsar and discuss the appropriate observation campaign of future detection.
+In Sec.\ref{sec-Sch}, we will derive Eq.~(\ref{eq-v}) in the small rotation limit for one spin-less, point-mass lens. 
+We then generalize it into multiple lenses even with spins.
+In Sec.\ref{sec-prediction}, we will describe the observable effects on double pulsar. 
+In Sec.\ref{sec-obs}, we conclude with a discussion of an appropriate observation campaign of future detection.
 
 \section{Definition from Scratch}
 \label{sec-born}
@@ -105,21 +105,25 @@ Let {\bf k} be the null vector of the light ray and {\bf e} be a polarization ve
 k^a \nabla_a e^c = k^a \partial_a e^c + k^a e^b \Gamma_{ab}^c =0~.
 \label{eq-para}
 \end{equation}
-When the rotation is small, using the Born approximation, integrating along a light ray from point A to B then leads to a change of polarization vector
+When the rotation is small, using the Born approximation, we can integrate along a light ray from point A to point B to get the change of polarization vector.
 \begin{equation}
 \Delta e^c = \int_A^B \hat{k}^a e_0^b \Gamma_{ab}^c~dl~,
 \label{eq-int}
 \end{equation}
 where ${\bf e_0}$ is the original vector and $\Delta${\bf e} is the change. 
 Straightforwardly, $\Delta \phi \equiv |\Delta {\bf e}|/|{\bf e}|$ could serve as a definition of how much a polarization vector has been rotated.
-This however, cannot be the full story since Eq.~(\ref{eq-int}) literally compares two vectors on the tangent spaces of two different points, which is meaningless. 
-The two vectors must be in the same tangent space to provide a physically meaningful rotation. 
+This however, cannot be the full story.
+That is because Eq.~(\ref{eq-int}) literally compares two vectors on the tangent spaces of two different points,.
+Such comparison is mathematically meaningless. 
+The two vectors must be in the same tangent space to provide a meaningful rotation. 
 It turns out that Eq.~(\ref{eq-int}) does give the correct value, but some extra care will be required to give it a clean definition.
 
 First of all, parallel transport is not limited to null rays, and one can have an integral similar to Eq.~(\ref{eq-int}) along any path. 
 In particular, we should perform a loop integral, and the answer will then be a meaningful comparison between two vectors on the same point. 
-Secondly, any such loop integral gives zero in Minkowski space, thus one can define  that any segment in Minkowski space contributes exactly zero to the rotation. 
-Now if we have a light ray starts from point A and reaches point B, both in asymptotic Minkowski space, one can validate Eq.~(\ref{eq-int}) by adding a term to it.
+Secondly, any such loop integral gives zero in Minkowski space, thus one can define  that any segment in Minkowski space contributes exactly zero to the rotation.
+\footnote{Namely, one can choose a gauge such that the connections, $\Gamma_{ab}^c$, are all zero.
+This is conveniently the gauge we always use for Minkowski space anyway.} 
+Now if we have a light ray which starts from point A and reaches point B, both in asymptotic Minkowski space, we can validate Eq.~(\ref{eq-int}) by adding a term to it.
 \begin{equation}
 \Delta e^c = \int_A^B \hat{k}^a e_0^b \Gamma_{ab}^c~dl +
  \int_B^A \hat{p}^a e_0^b \Gamma_{ab}^c dl~.
@@ -128,7 +132,7 @@ Now if we have a light ray starts from point A and reaches point B, both in asym
 The second integral follows a path from B back to A which stays in the asymptotic Minkowski part of the spacetime. 
 It contributes exactly zero value, therefore it allows us to assign the physical rotation in this loop to line integral from A to B.
 
-An actual observation works very similarly to Eq.~(\ref{eq-loop}). 
+An actual observation works very similarly to Eq.~(\ref{eq-loop}), and we depict that in Fig.\ref{fig:loop}.
 What we have is a source (pulsar) which constantly emits a fixed (albeit unknown) polarization. 
 We measure the polarization during a usual time, which is a light ray from $A_1$ to $B_1$. 
 And then we compare it with the polarization measured when its binary companion passes very close to the light of sight, which is another light ray from $A_2$ to $B_2$. 
@@ -143,7 +147,7 @@ We take the difference between these two measurements, which is exactly a loop i
 \end{eqnarray}
 The integral $B_1B_2$ and $A_1A_2$ are along timelike trajectories of the pulsar and the earth, which are effectively in the asymptotic region and nothing happens. 
 The integral $A_1B_1$ is along a light ray without the influence of the companion. 
-Thus the above loop integral is indeed calculating the rotation of polarization caused by the passage of the companion, as we can see in Fig.\ref{fig:loop}.
+Thus the above loop integral is indeed calculating the rotation of polarization caused by the passage of the companion.
 
 \begin{figure}
 \includegraphics[width=0.45\textwidth]{loop.pdf}
@@ -171,20 +175,20 @@ By definition of a rotation matrix, $\Delta_{cb}$ has to be anti-symmetric, whic
 &=& \frac{1}{2} \int k^b \left(\partial_a g_{bc} - \partial_c g_{ab}\right)d\lambda~.
 \end{eqnarray}
 Note that we have to drop the boundary term in the above integral, which is allowed because this is effectively a loop integral as we explained in the previous section.
-This demonstrates that there is actually a full $SO(3,1)$ rotation, $\Lambda^a_{\ b}\approx\left(g^a_{\ b} + \Delta^a_{\ b}\right)$, that is associated with a light ray starts and ends in asymptotic Minkowski region. 
+This demonstrates that there is actually a full $SO(3,1)$ rotation, $\Lambda^a_{\ b}\approx\left(g^a_{\ b} + \Delta^a_{\ b}\right)$, that is associated with a light ray which starts and ends in asymptotic Minkowski region. 
 Most importantly, since the rotation of the polarization vector is an $SO(2)$, the above $SO(3,1)$ rotation does not uniquely determine the change of the polarization angle.
 It also contains extra information such as the deflection of the light ray itself. 
 Particularly, one needs to specify a two-dimensional plane of polarization to determine which $SO(2)$ to project to. 
 For any observer, the polarization vectors are orthogonal to both the incoming light ray and its own worldline. 
 Thus a projection to the co-dimension-two surface orthogonal to the light ray and the observer 4-velocity is the desired $SO(2)$ rotation of polarization. 
-{\it Therefore, it is natural and necessary that polarization rotation depends on the observer velocity}, which explains the $v$ dependence in Eq.~(\ref{eq-v}).
+{\it Therefore, it is natural and necessary that polarization rotation depends on the observer frame.} This also explains the $v$ dependence in Eq.~(\ref{eq-v}), which has to be the velocity of the lens in the observer's frame.
 
-One last possible confusion is why such dependence is on the velocity of the observer instead of the source, since they seem to play equivalent roles in the integral of Eq.~(\ref{eq-int}). 
+One last possible confusion is why such dependence is on the observer instead of the source, since they seem to play equivalent roles in the integral of Eq.~(\ref{eq-int}). 
 Again, we remind the readers that the apparent line integral in Eq.~(\ref{eq-int}) is a convenient illusion.
-The physically meaningful rotation should be along a loop, where one sends out a polarization vector and waits for its  coming back to see the difference. 
+The physically meaningful rotation is defined by a loop, where one compares a vector to its parallel transported outcome after going around the loop.
 Thus there does exist one unique point at which the rotation is defined, which is where the two polarizations are being compared. 
 In practice, we will have no idea about the actual polarization when the signal is emitted at the pulsar. 
-All we know are the polarizations we received on earth, so that is the unique 4-velocity we care about.
+All we know are the polarizations we received on earth, so this is the frame we have to choose.
 
 \subsection{Beyond Born Approximation}
 
@@ -204,7 +208,7 @@ The light rays, before and after the deflection, $k$ and $k'$, are also reduced 
 As long as $\kappa\neq-\kappa'$, there is a unique, minimal $SO(3)$ rotation that aligns them.
 \footnote{Note that there are many rotations which can align them, but there is a unique minimal rotation, that is rotating along the direction orthogonal to both of them, $(\kappa\times\kappa')$.}
 Aligning $\kappa$ and $\kappa'$ also merges their polarization planes, in which an $SO(2)$ rotation is uniquely defined. 
-Thus, one can see that even beyond Born approximation, the rotation of polarization is still a well-defined, unambiguous, observer-dependent $SO(2)$ projection of a gauge-invariant $SO(3,1)$.
+Thus, one can see that even beyond Born approximation, the rotation of polarization is still a well-defined, unambiguous, observer-dependent $SO(2)$ projection of a covariant $SO(3,1)$ tensor.
 
 \section{Explicit calculation}
 \label{sec-Sch}
@@ -219,13 +223,18 @@ g_{ab}dx^adx^b &=& -\left(1-\frac{2M}{r}\right)dt^2 \\ \nonumber
 \end{eqnarray}
 where  $r^2 = x^2 + y^2 + z^2$,  and the Newton constant $G$ is conveniently set to $1$.
 Instead of studying an arbitrary light ray in the above coordinate, we will shift and boost this metric such that the lens has arbitrary position and velocity, and the relevant light ray is aways $x=t$.
-In principle, we need six parameters, i.e. $(x_0,y_0,z_0,v_x,v_y,v_z)$. However, 
-by applying symmetries, we could further simplify the problem so that eventually only three will be needed. 
-First we use shift symmetries in $x$ and $t$ to set $x_0=0$, which simply means that $t=0$ is defined as the time when the light ray is closest to the lens. Next, we set $v_x=0$, so instead of letting the lens to have an $x$-velocity, the asymptotic observer who measures the polarization will have a nonzero $x$-velocity. 
+In principle, we need six parameters, i.e. $(x_0,y_0,z_0,v_x,v_y,v_z)$. 
+By applying symmetries, we can further simplify the problem so that eventually only three will be needed. 
+
+First we use shift symmetries in $x$ and $t$ to set $x_0=0$, which simply means that $t=0$ is defined as the time when the light ray is closest to the lens. 
+Next, we set $v_x=0$, so instead of letting the lens to have an $x$-velocity, the asymptotic observer who measures the polarization will have a nonzero $x$-velocity. 
 This changes nothing because the light ray is in the $x$ direction, $k^\mu = (1,1,0,0)$.
 Independent of what $x$-velocity the observer has, the plane orthogonal to both the light ray and the observer will be the $y$-$z$ plane.
 Thus we are always calculating the rotation of polarization on the $y$-$z$ plane.
-Finally, using rotational symmetry on the $y$-$z$ plan, we can set $v_z=0$, leaving the remaining three parameters to be $v_y=v$, $y_0$ and $z_0$. The required coordinate transformation from Eq.~(\ref{eq-SchIso}) is given by
+Finally, using rotational symmetry on the $y$-$z$ plan, we can set $v_z=0$, leaving the remaining three parameters to be $v_y=v$, $y_0$ and $z_0$. 
+
+Employing these symmetries significantly simplifies the problem, and we illustrate the final situation in Fig.\ref{fig:rotation}
+Since the lens is the centre of the coordinate in Eq.~(\ref{eq-SchIso}), we need to apply the appropriate coordinate transformation to accommodate our symmetry choice. 
 \begin{eqnarray}
 \gamma = (1-v^2)^{-1/2}~, \ \ t \rightarrow \gamma(t-vy)~, \nonumber \\
  y\rightarrow \gamma(y-vt-y_0)~, \ \ z\rightarrow (z-z_0)~.
@@ -240,6 +249,17 @@ g_{ab}dx^adx^b &=& -\left[1-\gamma^2(1+v^2)\frac{2M}{r}\right]dt^2
 &+& \left(1+\frac{2M}{r}\right)(dx^2+dz^2)~,
 \end{eqnarray}
 where $r = \sqrt{ \gamma^2(y-vt-y_0)^2 + x^2 + (z-z_0)^2 }$. 
+
+\begin{figure}
+\includegraphics[width=0.45\textwidth]{rotation.pdf}
+\caption{\label{fig:rotation}
+Using all symmetries, we can reduce any calculation of polarization-rotation from a spin-less, point-mass lens to this picture.
+The red dot at the origin is the light ray traveling in the $x$ direction.
+$M$ is the mass of the lens.
+$v$ is its velocity (only in $y$ direction).
+$(y_0,z_0)$ is the location of the lens relative to the light ray.
+}
+\end{figure}
 
 While calculating the connections,
 \begin{equation}
@@ -268,13 +288,15 @@ The direction of the light ray $k^a$ determines which component of $J$ we care a
 The final, generalized format of Eq.~(\ref{eq-gen}) should be straightforward from our symmetry choice.
 A more explicit calculation in \cite{KopMas01} led to the same result.
 
-Furthermore, assume that many light rays keep coming in the $x$ direction while the lens is moving in the constant velocity.
-Then we will get maximal rotation at the light ray which is closest to the lens, which corresponds to $y_0=0$ in the above calculation.
-
+Furthermore, let us imagine that there is a continuous source of signals.
+The light along the $x$ direction continues to shine while the lens is moving in its constant velocity in the $y$ direction.
+The light ray which is closest to the lens will get the maximum rotation.
+In other words, we get maximum rotation when the lens' velocity is orthogonal to its distance to the light way.
+This corresponds to $y_0=0$ in the above calculation.
 \begin{equation}
 \Delta \phi_{Max} = \frac{4M}{z_0}v ~.
 \end{equation}
-This is the promised result in Eq.~(\ref{eq-v}).
+This maximum rotation along a source trajectory is the promised result in Eq.~(\ref{eq-v}).
 
 \subsection{General Case}
 
@@ -358,16 +380,15 @@ Similarly, assume the binary orbit is $10^9 m$, velocity is about $0.1\%$ speed 
 \end{equation}
 In this case, the spin contribution is negligible.
 
-If the lens is a recycled (fast) neutron star, its the period would be $\sim 1ms$, and its spin angular momentum is increased by a factor of $100$.
-If it is also aligned with the line of sight, the spin contribution will be $10\%$ of the orbital contribution, which is no-longer negligible.
+If the lens is a recycled (fast) neutron star, its the period would be $\sim 1ms$, and its spin angular momentum is increased by a factor of $\sim1000$.
+If it is also aligned with the line of sight, the spin contribution will be comparable to the orbital contribution.
 Fortunately, fast pulsars are usually spun-up by accretion from the companion, so its spin is usually aligned with the orbital plane.
-In our case, that means the spin is almost perpendicular to the line-of-sight, so its contribution is again negligible.
+In our case, it means that the spin is almost perpendicular to the line-of-sight, so its contribution is again negligible.
 
-We can estimate the maximal rotation from the orbital contribution only, which is about\begin{equation}
+Therefore, in either case, we can estimate the maximal rotation from the orbital contribution only, which is about\begin{equation}
 \Delta\phi \approx 4 \frac{10^7 m^2}{\left[  10^9m\times  2\pi / 180 \right]^2}\approx 3*10^{-8}~.
 \end{equation}
-The actual value is slightly larger.
-%{\bf XXX: Xin, please see if you need to improve my number to be closer to the actual values.}
+The actual value for double pulsar is slightly larger.
 In Fig.~(\ref{fig:rotang}), we calculated the signal $\Delta \phi$ using the orbital information of double pulsar system PSR J0737-3039 \cite{KraSta97}. 
 We ignore the spin contribution since they are negligible as we explained. 
 We can see that during a rotation period, we can expect a maximal rotation of polarization ($\Delta\phi$) at about $10^{-7} rad$. 
@@ -377,7 +398,7 @@ We specifically zoomed in and blacked-out the eclipsed.
 We found that the peak of the $\Delta\phi$ curve is significantly wider than the eclipse duration.
 Thus for a (relatively) long duration before and after the eclipse, we can still observe $\Delta\phi\sim10^{-7}rad$.
 We can also see that although the double-pulsar is already quite edge-on, one can hope to get luckier and discover another system whose inclination angle is even closer to $90$ degree.
-The resulting polarization can be even larger.
+The resulting rotation of polarization can be even larger.
 
 
 
@@ -389,32 +410,27 @@ The resulting polarization can be even larger.
 %\end{itemize}
 
 \section{Observational considerations}
+\label{sec-obs}
 
-The small swing in polarization angle will be challenging to detect.
-For parameters of PSR J0737-3039 with a polarized fraction of about
-50\% \cite{2004ApJ...615L.137D}, raw thermal sensivity requires a
-signal-to-noise of at least $10^7$ in polarization.  For a pulsar
-self-noise dominated telescope such as FAST or SKA with a band width
-of $\sim 1$ GHz, requires $10^6$ seconds of on target on-pulse
-integration to achieve a $5-\sigma$ detection, a substantial
-commitment of resources.  Practical considerations include the
-limitation that any given object can be only seen for a limited about
-of time each day, which for FAST could be short at the low declination
-of PSR J0737-3039, making the SKA a more suitable facility. At a duty
-cycle of about 20\%, this requires of order a year of observations
-with the full phase 2 telesope.  During superior conjunction, the
-companion's magnetosphere partially absorbs the pulsar, and plasma
-faraday effects may also complicate the analysis.  The pulsar is
-likely to be monitored extensively for other reasons, potentially
-resulting in a detection over decades of SKA operations.  Similarly,
-other more optimal systems may be discovered, for example pulsar-black
-hole systems.  Our estimates indicates that this effect is in
-principle observable in the foreseeable future.  The calculations in
-this paper compute the observable swing in polarization angle from the
-gravitational faraday effect of the system orbital angular momentum,
-which was not previously understood.  The gravitational
-Faraday effect can be added to the wishlist of pulsar tests of general
-relativity.
+Such a small swing in polarization angle will be challenging to detect.
+For parameters of PSR J0737-3039 with a polarized fraction of about 50
+\% \cite{2004ApJ...615L.137D}, raw thermal sensitivity requires a
+signal-to-noise of at least $10^7$ in polarization.  
+For a pulsar self-noise dominated telescope such as FAST \cite{FAST} or SKA \cite{SKA} with a band width of $\sim 1$ GHz, it requires $10^6$ seconds of on target on-pulse integration to achieve a $5-\sigma$ detection.
+This is a substantial commitment of resources.  
+On top of that, there are practicalities one must consider carefully.
+First of all, any given object can be only seen for a limited about of time each day.
+This observable duration for FAST could be short at the low declination of PSR J0737-3039, so SKA is likely the more suitable facility. 
+At a duty cycle of about 20\%, this requires a few years of observations with the full phase 2 telescopes.  
+During superior conjunction, the companion's magnetosphere partially absorbs the pulsar, and plasma faraday effects may also complicate the analysis.
+\footnote{In principle, the plasma effect is frequency dependent, therefore distinguishable from the gravitational effect which is achromatic.} 
+
+Despite the substantial efforts required, the pulsar is likely to be monitored extensively for other reasons.
+Thus a detection may be eventually achieved over decades of SKA operations.  
+Alternatively, other more optimal systems may be discovered, for example pulsar-black hole systems.  
+Our estimates indicates that this effect is in principle observable in the foreseeable future.  
+%The calculations in this paper compute the observable swing in polarization angle from the gravitational faraday effect of the system orbital angular momentum, which was not previously understood.  
+The gravitational Faraday effect can be added to the wish-list of pulsar tests of general relativity.
 
 \newcommand{\apjl}{ApJ}      % Astrophysical Journal Letters
 
