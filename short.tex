@@ -97,7 +97,7 @@ In Sec.\ref{sec-obs}, we conclude with a discussion of an appropriate observatio
 \section{Definition from Scratch}
 \label{sec-born}
 
-\subsection{Operational Definition}
+\subsection{Parallel Transport around a Loop}
 
 Intuitively, one can imagine the polarization as a vector attached to a light ray that is spacelike and orthogonal to the direction of propagation. 
 Let {\bf k} be the null vector of the light ray and {\bf e} be a polarization vector, a parallel transport of {\bf e} should be valid in the geometric optic limit, i.e.
@@ -116,27 +116,42 @@ This however, cannot be the full story.
 That is because Eq.~(\ref{eq-int}) literally compares two vectors on the tangent spaces of two different points,.
 Such comparison is mathematically meaningless. 
 The two vectors must be in the same tangent space to provide a meaningful rotation. 
-It turns out that Eq.~(\ref{eq-int}) does give the correct value, but some extra care will be required to give it a clean definition.
+Another way to state the same problem is that the value of connections, $\Gamma^c_{ab}$, depends on the coordinate choice.
+By a different gauge choice, one can change the value of the line integral of Eq.~(\ref{eq-int}) to any value.
+
+Many literature used Eq.~(\ref{eq-int}) and computed its value in one very natural gauge.
+We can probably call that the asymptotic Minkowski gauge or the Schwarzschild gauge, in which $\Gamma_{ab}^c$ falls of to zero asymptotically away from matter sources as they would in the Schwarzschild coordinate.
+It turns out that Eq.~(\ref{eq-int}) in such gauge happens to give the correct, gauge-independent answer.
+Here we will explain why.
 
 First of all, parallel transport is not limited to null rays, and one can have an integral similar to Eq.~(\ref{eq-int}) along any path. 
-In particular, we should perform a loop integral, and the answer will then be a meaningful comparison between two vectors on the same point. 
-Secondly, any such loop integral gives zero in Minkowski space, thus one can define  that any segment in Minkowski space contributes exactly zero to the rotation.
-\footnote{Namely, one can choose a gauge such that the connections, $\Gamma_{ab}^c$, are all zero.
-This is conveniently the gauge we always use for Minkowski space anyway.} 
-Now if we have a light ray which starts from point A and reaches point B, both in asymptotic Minkowski space, we can validate Eq.~(\ref{eq-int}) by adding a term to it.
+If we combine the line integral in Eq.~(\ref{eq-int}) with a similar integral along another curve from $B$ back to $A$, it becomes a loop integral.
 \begin{equation}
 \Delta e^c = \int_A^B \hat{k}^a e_0^b \Gamma_{ab}^c~dl +
  \int_B^A \hat{p}^a e_0^b \Gamma_{ab}^c dl~.
 \label{eq-loop}
 \end{equation}
-The second integral follows a path from B back to A which stays in the asymptotic Minkowski part of the spacetime. 
-It contributes exactly zero value, therefore it allows us to assign the physical rotation in this loop to line integral from A to B.
+This loop integral is comparing two vectors on the tangent space of one point, so it is mathematically meaningful.
+It is also gauge invariant.
+The gauge freedom allows us to change the value of $\Gamma_{ab}^c$ locally but not globally, as there will be constraints.
+Parallel transport in any close loop is indeed one of those constraints.
+Its answer carries the gauge-invariant information about spacetime curvature enclosed by such loop, and it must be gauge invariant.
 
-An actual observation works very similarly to Eq.~(\ref{eq-loop}), and we depict that in Fig.\ref{fig:loop}.
+Eq.~(\ref{eq-int}) is just providing a convenient way to evaluate such gauge-invariant loop integral.
+Assume that we are in asymptotic Minkowski space, and both points $A$ and $B$ are in the asymptotic region.
+We can then choose this path from $B$ back to $A$ to stay in the asymptotic region.
+In the asymptotic Minkowski gauge that $\Gamma_{ab}^c\rightarrow0$ asymptotically, the segment of integral through the asymptotic region contributes nothing.
+Therefore, the line integral, Eq.~(\ref{eq-int}), in the asymptotic Minkowski gauge, gives exactly the gauge-invariant answer of the loop integral in Eq.~(\ref{eq-loop}).
+
+Furthermore, when there are multiple matter sources in asymptotic Minkowski space, there is a well-defined, common asymptotic Minkowski gauge.
+That simply means $\Gamma_{ab}^c$ is only nonzero near sources, decays away from individual sources like in a Schwarzschild metric, and the contribution from each source superimposes in the region far away from all sources.
+Computing a gauge-invariant loop integral in this gauge allows us to identify the contributions to rotation from individual sources, since only the segments of integral near sources have nonzero contributions.
+
+An actual observation, as we depict that in Fig.\ref{fig:loop}, is closely related to a loop integral.
 What we have is a source (pulsar) which constantly emits a fixed (albeit unknown) polarization. 
 We measure the polarization during a usual time, which is a light ray from $A_1$ to $B_1$. 
-And then we compare it with the polarization measured when its binary companion passes very close to the light of sight, which is another light ray from $A_2$ to $B_2$. 
-We take the difference between these two measurements, which is exactly a loop integral.
+And then we compare it with the polarization measured when its binary companion passes very close to the line of sight, which is another light ray from $A_2$ to $B_2$. 
+We take the difference between these two measurements, which is a loop integral if we add two extra time-like segments.
 \begin{eqnarray}
 \Delta e^c &=& e^c|_{ B_2} - e^c|_{ B_1}
 = \int_{A_2}^{B_2} \hat{k}^a e_0^b \Gamma_{ab}^c~dl
@@ -145,9 +160,20 @@ We take the difference between these two measurements, which is exactly a loop i
 \int_{A_1}^{A_2} \hat{p}^a e_0^b \Gamma_{ab}^c dl~.
 \label{eq-pulsar}
 \end{eqnarray}
-The integral $B_1B_2$ and $A_1A_2$ are along timelike trajectories of the pulsar and the earth, which are effectively in the asymptotic region and nothing happens. 
-The integral $A_1B_1$ is along a light ray without the influence of the companion. 
-Thus the above loop integral is indeed calculating the rotation of polarization caused by the passage of the companion.
+The two time-like segments, $A_1A_2$ and $B_1B_2$,  and the light ray $A_1B_1$, are all far away from the companion.
+They all contribute nothing in the asymptotic Minkowski gauge.
+Thus the above loop integral can be calculated in the asymptotic Minkowski gauge as only the line integral $A_2B_2$.
+Such line integral actually only has contribution near the companion, thus it is indeed the rotation of polarization caused by the passage of the companion.
+\footnote{
+This simplified story is true when both the emitter and receiver are light so we can ignore their contribution to $\Gamma_{ab}^c$.
+In reality, points $A1$, $A2$ are near the pulsar, and $B_1$, $B_2$ are on earth, so neither is in the asymptotic region.
+Thus the time-like segments can be nonzero, and the null segments will have extra contribution near the end points.
+Nevertheless, the extra contributions to the null segments will cancel each other.
+The time-like contributions has nothing to do with the companion, and they are degenerate with an intrinsic variation of pulsar signal or the telescope receiving function.
+We can simply observe and fit such behaviour when the companion is not passing through the line-of-sight, and subtract it from the data.
+Thus treating them as in the asymptotic region is a simple way to show the contribution from the companion without loss of generality.}
+
+
 
 \begin{figure}
 \includegraphics[width=0.45\textwidth]{loop.pdf}
