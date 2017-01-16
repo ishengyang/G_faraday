@@ -75,7 +75,8 @@ Although Eq.~(\ref{eq-v}) has been derived by some authors, such as in \cite{Kop
 
 In this paper, we will resolve the confusions by deriving Eq.~(\ref{eq-v}) from the very basic concept of general relativity---parallel transports. 
 It turns out that $\Delta\phi$, despite being a number, is not a gauge-invariant scalar.
-It is actually an $SO(2)$ projection of a covariant $SO(3,1)$ tensor.
+It is actually an $SO(2)$ projection of an $SO(3,1)$ tensor.
+The $SO(3,1)$ rotation is a gauge-invariant property associated with a light ray that starts and ends far away from the lens, but $\Delta\phi$ depends on which $SO(2)$ we project to.
 Therefore it is natural for $\Delta\phi$ to be gauge-dependent.
  {\it More precisely, the rotation of polarization depends on the frame of the observer. }
 Such observer/gauge-dependence was the source of confusions.
@@ -117,9 +118,9 @@ That is because Eq.~(\ref{eq-int}) literally compares two vectors on the tangent
 Such comparison is mathematically meaningless. 
 The two vectors must be in the same tangent space to provide a meaningful rotation. 
 Another way to state the same problem is that the value of connections, $\Gamma^c_{ab}$, depends on the coordinate choice.
-By a different gauge choice, one can change the value of the line integral of Eq.~(\ref{eq-int}) to any value.
+By choosing a different gauge, one can change the value of the line integral of Eq.~(\ref{eq-int}) to any value.
 
-Many literature used Eq.~(\ref{eq-int}) and computed its value in one very natural gauge.
+Many literature used Eq.~(\ref{eq-int}) and computed its value in one very natural gauge, for example \cite{KopMas01, Dai14}.
 We can probably call that the asymptotic Minkowski gauge or the Schwarzschild gauge, in which $\Gamma_{ab}^c$ falls of to zero asymptotically away from matter sources as they would in the Schwarzschild coordinate.
 It turns out that Eq.~(\ref{eq-int}) in such gauge happens to give the correct, gauge-independent answer.
 Here we will explain why.
@@ -184,7 +185,16 @@ Parallel transport along a loop contains 4 segments: bent light ray (solid black
 
 \subsection{Observer Dependence}
 
-Clearly, Eq.~(\ref{eq-int}) is the leading order effect of a small rotation matrix.
+In the previous section, we explained that a given vector, parallel-transported along a loop, goes through a gauge-invariant rotation.
+In the asymptotic Minkowski gauge, such rotation can be calculated along a light ray.
+This however, does not resolve all the confusion in the rotation of polarization.
+The next problem is {\it which vector do we rotate?}
+Polarization lives in a 2-dimensional plane, which cannot be uniquely determined by a light ray.
+Thus there is no unambiguous answer to the question of ``how much rotation of polarization has a light ray gone through."
+We need both the light ray and the observer's 4-velocity to determine the 2-dimensional plane on which the polarization lives.
+Therefore, ``how much rotation'' must have an observer dependent answer.
+
+Mathematically, we can see that Eq.~(\ref{eq-int}) is the leading order effect of a small rotation matrix.
 \begin{equation}
 e^c = e_0^c + \Delta e^c = \Lambda^c_{\ b} e_0^b = 
 \left( g^c_{\ b} + \Delta^c_{\ b} \right) e_0^b~,
@@ -201,8 +211,9 @@ By definition of a rotation matrix, $\Delta_{cb}$ has to be anti-symmetric, whic
 &=& \frac{1}{2} \int k^b \left(\partial_a g_{bc} - \partial_c g_{ab}\right)d\lambda~.
 \end{eqnarray}
 Note that we have to drop the boundary term in the above integral, which is allowed because this is effectively a loop integral as we explained in the previous section.
-This demonstrates that there is actually a full $SO(3,1)$ rotation, $\Lambda^a_{\ b}\approx\left(g^a_{\ b} + \Delta^a_{\ b}\right)$, that is associated with a light ray which starts and ends in asymptotic Minkowski region. 
-Most importantly, since the rotation of the polarization vector is an $SO(2)$, the above $SO(3,1)$ rotation does not uniquely determine the change of the polarization angle.
+This demonstrates that there is actually a full $SO(3,1)$ rotation, $\Lambda^a_{\ b}\approx\left(g^a_{\ b} + \Delta^a_{\ b}\right)$, that is associated with a loop, therefore a light ray which starts and ends in asymptotic Minkowski region. 
+
+This $SO(3,1)$ rotation is the gauge-invariant property associated with the light ray, but it does not yet determine the rotation of polarization, which is only an $SO(2)$.
 It also contains extra information such as the deflection of the light ray itself. 
 Particularly, one needs to specify a two-dimensional plane of polarization to determine which $SO(2)$ to project to. 
 For any observer, the polarization vectors are orthogonal to both the incoming light ray and its own worldline. 
